@@ -1,11 +1,22 @@
-h2 {
-    color: green;
-}
-
-h1 {
- color: red;
+footer {
+    background-color: black;
+    position: absolute;
+    bottom: 1px;
+    text-align: left;
 }
 
 p {
     color: white;
+}
+
+.endpage {
+    text-align: center;
+}
+
+strong {
+    color: rgba(112,208,56,1);
+}
+
+.faq {
+    background-color: rgba(112,208,56,1);
 }
