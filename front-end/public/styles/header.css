@@ -1,0 +1,92 @@
+/* En attente */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+}
+
+/* Mise en forme des liens menu  */
+
+li {
+  list-style: none;
+}
+
+a,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(112, 208, 56, 1);
+}
+
+/* Dimension du logo */
+.logo {
+    width: 50%;
+    padding: 10px;
+}
+
+/* NavBar */
+
+#icons {
+  color: white;
+  padding: 5px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+nav ul {
+  position: fixed;
+  left: -100%;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  transition: 0.25s;
+}
+
+nav li {
+  padding: 5px;
+}
+
+nav.active ul {
+  left: 0;
+}
+
+/* placement RS */
+
+.rs{ 
+  width: 100%;
+  position: relative;
+  left: 65%;
+  gap: 20px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.rs i {
+padding: 5px;}
+
+/* @media (min-width: 1000px) {
+    
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        width: 60%;
+    }
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        font-size: calc(0.5em + 1.5vw);
+    } */
