@@ -81,3 +81,9 @@ a:visited {
   margin: 10px 0;
   padding-left: 10px;
 }
+
+.dons li {
+  margin: 0px 10px;
+  padding-left: 10px;
+  list-style-type: none;
+}
