@@ -4,9 +4,13 @@
 }
 
 body {
-  color: white;
-  background-color: rgba(32, 32, 32, 1);
+  color: #fff;
+  background-color: #202020;
   font-family: Quicksand, sans-serif;
+}
+
+main {
+  padding: 0 24px;
 }
 
 h1,
@@ -18,7 +22,6 @@ h6 {
   text-align: center;
   font-family: cursive, Caveat;
   margin-block: 16px;
-  padding: 10px;
 }
 
 h3 {
@@ -27,8 +30,9 @@ h3 {
 }
 
 p {
-  padding: 10px;
-  margin: 16px 10px;
+  margin: 16px 0;
+  padding: 5px;
+  line-height: 1.5;
 }
 
 a {
@@ -40,7 +44,11 @@ a:visited {
   color: rgba(112, 208, 56, 1);
 }
 
-.onglet {
+.onglet a {
+  color: white;
+}
+
+.ongletAsso {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -48,7 +56,7 @@ a:visited {
   padding-left: 0;
 }
 
-.onglet li {
+.ongletAsso a {
   border: 1px solid white;
   list-style-type: none;
   cursor: pointer;
@@ -56,10 +64,7 @@ a:visited {
   border-radius: 5px;
 }
 
-.onglet li:hover {
-  background: rgba(112, 208, 56, 1);
-}
-.onglet li:active {
+.ongletAsso a:hover {
   background: rgba(112, 208, 56, 1);
 }
 
@@ -72,9 +77,8 @@ a:visited {
 
 .chiffres h4 {
   font-size: 1.8rem;
-  text-align: justify;
-  padding-left: 10px;
-  padding-top: 10px;
+  text-align: start;
+  padding: 10px;
 }
 .chiffres p {
   text-align: justify;
@@ -82,8 +86,27 @@ a:visited {
   padding-left: 10px;
 }
 
+li {
+  margin-block: 10px;
+  line-height: 1.5;
+}
+
 .dons li {
-  margin: 0px 10px;
-  padding-left: 10px;
   list-style-type: none;
+}
+.liens {
+  display: flex;
+  flex-direction: column;
+}
+
+/* onglet */
+
+.onglet.active {
+  background-color: rgba(
+    112,
+    208,
+    56,
+    1
+  ); /* Couleur de fond pour l'onglet actif */
+  color: #fff;
 }
