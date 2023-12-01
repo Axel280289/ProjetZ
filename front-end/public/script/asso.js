@@ -27,9 +27,5 @@ function openTab(tabId) {
   }
 }
 
-function openDefaultTab() {
-  openTab("tab1");
-}
-
 // Appel de la fonction pour ouvrir l'onglet par défaut au chargement de la page
 openDefaultTab();
