@@ -10,7 +10,7 @@ body {
 }
 
 main {
-  padding: 0 24px;
+  padding: 0 20px;
 }
 
 h1,
@@ -99,14 +99,25 @@ li {
   flex-direction: column;
 }
 
+.site {
+  color: #fff;
+  text-shadow: 2px 2px 4px #000000;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 0;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.466) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.486) 0px -2px 6px 0px inset;
+  background-color: rgba(112, 208, 56, 1);
+}
+
 /* onglet */
 
 .onglet.active {
-  background-color: rgba(
-    112,
-    208,
-    56,
-    1
-  ); /* Couleur de fond pour l'onglet actif */
+  background-color: rgba(112, 208, 56, 1);
   color: #fff;
 }
+/* Couleur de fond pour l'onglet actif */
