@@ -6,6 +6,9 @@
     --dark-color: rgba(16,16,16,1);
     --black-color: rgba(0,0,0,1);
 
-    --main-font: 
+    --main-font: 'Quicksand', sans-serif; 
+    --default-font: Arial, Helvetica, sans-serif;
+    --title-font: 'Caveat', cursive;
 }
+
 
