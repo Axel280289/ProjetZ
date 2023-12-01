@@ -4,9 +4,9 @@
 }
 
 body {
-  color: #fff;
-  background-color: #202020;
-  font-family: Quicksand, sans-serif;
+  color: var(--tertiaire-color);
+  background-color: var(--primary-color);
+  font-family: var(--main-font);
 }
 
 main {
@@ -20,12 +20,18 @@ h4,
 h5,
 h6 {
   text-align: center;
-  font-family: cursive, Caveat;
+  font-family: var(--title-font);
   margin-block: 16px;
 }
 
+h1 {
+  font-size: 2.6rem;
+}
+h2 {
+  font-size: 2rem;
+}
 h3 {
-  color: rgba(112, 208, 56, 1);
+  color: var(--secondary-color);
   font-size: 1.5rem;
 }
 
@@ -36,16 +42,16 @@ p {
 }
 
 a {
-  color: rgba(112, 208, 56, 1);
+  color: var(--secondary-color);
   font-weight: 700;
 }
 
 a:visited {
-  color: rgba(112, 208, 56, 1);
+  color: var(--secondary-color);
 }
 
 .onglet a {
-  color: white;
+  color: var(--tertiaire-color);
 }
 
 .ongletAsso {
@@ -57,7 +63,7 @@ a:visited {
 }
 
 .ongletAsso a {
-  border: 1px solid white;
+  border: 1px solid var(--tertiaire-color);
   list-style-type: none;
   cursor: pointer;
   padding: 3px;
@@ -65,7 +71,7 @@ a:visited {
 }
 
 .ongletAsso a:hover {
-  background: rgba(112, 208, 56, 1);
+  background: var(--secondary-color);
 }
 
 .chiffres {
@@ -100,7 +106,7 @@ li {
 }
 
 .site {
-  color: #fff;
+  color: var(--tertiaire-color);
   text-shadow: 2px 2px 4px #000000;
   display: block;
   text-align: center;
@@ -111,13 +117,13 @@ li {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.466) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.486) 0px -2px 6px 0px inset;
-  background-color: rgba(112, 208, 56, 1);
+  background-color: var(--secondary-color);
 }
 
 /* onglet */
 
 .onglet.active {
-  background-color: rgba(112, 208, 56, 1);
-  color: #fff;
+  background-color: var(--secondary-color);
+  color: var(--tertiaire-color);
 }
 /* Couleur de fond pour l'onglet actif */
