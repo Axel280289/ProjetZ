@@ -6,7 +6,7 @@ const findUserByMail = require("../middlewares/findUserByMail");
 const path = require("path");
 const jwt = require("jsonwebtoken");
 
-const signUser = async (idAddress, req, res) => {
+const signUser = async (req, res) => {
   // Hashage du mot de passe grâce à la méthode hash du package bcrypt
   const hash = await bcrypt.hash(req.body.password, 10);
 
@@ -15,6 +15,8 @@ const signUser = async (idAddress, req, res) => {
     firstname: req.body.firstname,
     lastname: req.body.lastname,
     email: req.body.email,
+    birthdate: req.body.birthdate,
+    fullaccess: req.body.fullaccess,
     password: hash,
   });
 
@@ -75,7 +77,7 @@ exports.createUser = async (req, res) => {
       // On commence par vérifier si l'utilisateur existe en fonction de son email
       await findUserByMail(req)
         .then((user) => {
-          signUser(address.id, req, res);
+          signUser(req, res);
           // Si l'utilisateur existe on envois un message
           if (user) {
             res.status(400).send("User Already Exist");

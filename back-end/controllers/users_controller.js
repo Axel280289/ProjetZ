@@ -22,6 +22,8 @@ const newUser = async (req, res) => {
     firstname: req.body.firstname,
     lastname: req.body.lastname,
     email: req.body.email,
+    birthdate: req.body.birthdate,
+    fullaccess: req.body.fullaccess,
     password: hash,
   });
 
@@ -47,6 +49,8 @@ const refreshUser = async (req, res, user) => {
     firstname: req.body.firstname,
     lastname: req.body.lastname,
     email: req.body.email,
+    birthdate: req.body.birthdate,
+    fullaccess: req.body.fullaccess,
     password: user.password,
   };
 
@@ -107,7 +111,7 @@ exports.createUser = (req, res) => {
     /* On vérifie si l'utilisateur existe déjà dans la base de données */
     findUserByMail(req)
       .then((user) => {
-        newUser(address._id, req, res);
+        newUser(req, res);
         /* Si l'utilise existe */
         if (user) {
           return res.status(409).json({ message: "User already exists" });
@@ -132,7 +136,7 @@ exports.getUsers = async (req, res, next) => {
       ? req.session.isConnected
       : false;
     /* On récupère les informations de l'utilisateur (find) en oubliant pas de relier la collection addressusers (populate) */
-    const users = await User.find().populate("address");
+    const users = await User.find();
     res
       .status(200)
       .render(
@@ -185,7 +189,7 @@ exports.updateUser = async (req, res) => {
     // On vérifie si l'utilisateur existe
     await findUserById(req.params.id)
       .then((user) => {
-        refreshUser(address._id, req, res, user);
+        refreshUser(req, res, user);
       })
       .catch((error) => {
         res.status(404).send("Error Find User" + error.message);

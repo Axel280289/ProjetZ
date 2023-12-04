@@ -9,7 +9,9 @@ const verifInputs = (req, res) => {
     .isString()
     .notEmpty();
   body("email", "L'email est obligatoire").isEmail().notEmpty();
-  body("fullacces", "Le choix est obligatoire").isEmail().notEmpty();
+  body("fullaccess", "Le choix est obligatoire")
+    .isString()
+    .isIn(["adminPrincipal", "admin"]);
   body("password", "Le mot de passe est obligatoire").isString().notEmpty();
   body("confirm", "La confirmation du mot de passe est obligatoire")
     .isString()

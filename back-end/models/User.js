@@ -9,7 +9,11 @@ const userSchema = mongoose.Schema({
   email: { type: String, required: true, trim: true, unique: true },
   birthdate: { type: String, required: true, trim: true },
   password: { type: String, required: true, trim: true },
-  fullaccess: { type: Boolean, required: true, trim: true },
+  fullaccess: {
+    type: String,
+    enum: ["adminPrincipal", "admin"],
+    required: true,
+  },
 });
 
 userSchema.plugin(uniqueValidator);
