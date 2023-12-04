@@ -10,3 +10,6 @@
   --default-font: Arial, Helvetica, sans-serif;
   --title-font: "Caveat", cursive;
 }
+
+body {
+background-color: var(--primary-color);}

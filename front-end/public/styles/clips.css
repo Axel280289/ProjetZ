@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+    color: white;}
+.container-sideBar {
+  background-color: var(--primary-color);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Parametrage sidebar */
+
+#nav-sideBar ul {
+  display: none;
+}
+
+.cross_burger1 {
+  display: none;
+}
+
+#nav-sideBar.active ul {
+  display: block;
+}
+
+#nav-sideBar.active .btn_burger1 {
+  display: none;
+}
+
+#nav-sideBar.active .cross_burger1 {
+  display: block;
+}
+
+#select-day {
+  display: flex;
+}
+#select-day ul a {
+  color: white;
+  text-decoration: none;
+}
+
+#select-day li {
+  list-style: none;
+}
+
+#select-day ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}

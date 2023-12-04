@@ -1,0 +1,162 @@
+/* En attente */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 0;
+  height: 70px;
+  width: 100%;
+}
+/* Mise en forme des liens menu  */
+
+header li {
+  list-style: none;
+  margin: 30px;
+}
+
+header #nav a {
+  color: white;
+  text-decoration: none;
+}
+
+header #nav a:hover {
+  color: var(--secondary-color);
+}
+
+/* Dimension du logo */
+header .logo {
+  position: absolute;
+  height: 100%;
+  top: 10px;
+  left: 5px;
+  z-index: 1;
+}
+
+/* NavBar */
+header #icons {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+header .cross_burger {
+  display: none;
+}
+
+header nav.active #icons .btn_burger {
+  display: none;
+}
+
+header nav.active #icons .cross_burger {
+  display: block;
+}
+
+header #nav.active ul {
+  margin-top: 80px;
+}
+
+header #nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+header #nav ul {
+  display: none;
+}
+
+header #nav.active ul {
+  display: block;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  background-color: black;
+}
+
+/* placement RS */
+
+header .rs {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+  font-size: 1.4rem;
+  padding: 0px 5px;
+  background-color: var(--primary-color);
+}
+
+header .rs a {
+  margin: 2px;
+}
+
+header #logo-menu {
+  display: none;
+}
+
+@media (min-width: 405px) {
+  header #icons {
+    display: none;
+  }
+
+  header #logo-menu {
+    display: flex;
+    gap: 5px;
+  }
+
+  header #menu-icone {
+    position: absolute;
+    left: 130px;
+    top: 20px;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 700px) {
+  header .logo {
+    left: 42%;
+  }
+
+  header #nav #menu-icone {
+    position: absolute;
+    left: 5px;
+  }
+}
+
+@media (min-width: 1000px) {
+  header #menu-icone {
+    display: none;
+  }
+
+  header #nav #menu-principal {
+    display: block;
+    display: flex;
+    gap: 0px;
+  }
+
+  header #menu-principal li {
+    margin: 5px;
+  }
+}
+
+.logout {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 60px;
+  top: 10px;
+}
+
+@media (min-width: 405px) {
+  .logout {
+    right: 10px;
+    top: 10px;
+  }
+}

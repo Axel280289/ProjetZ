@@ -1,19 +1,53 @@
-<header>
-  <nav>
-    <div class="navGrid">
-      <div class="logo">
-        <a href="/"><img src="/images/zevent-logo.webp" alt="Logo" /></a>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/header.css" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<header id="header">
+  <div class="logout">
+    <i class="fa-solid fa-power-off" style="color: #1ee718"></i>
+  </div>
+  <nav id="nav" class="">
+    <img class="logo" src="/images/zevent-logo.webp" alt="Logo du Zevent" />
+    <div id="menu-icone">
+      <div id="logo-menu">
+        <a href=""
+          ><i class="fa-solid fa-house fa-2xl" style="color: #ffffff"></i
+        ></a>
+        <a href=""
+          ><i class="fa-solid fa-building fa-2xl" style="color: #ffffff"></i
+        ></a>
       </div>
-      <nav class="menu" id="menu">
-        <ul>
-          <% if(!isConnected) { %>
-          <!-- Si l'utilisateur est connecté il peut accéder aux pages Admin et Déconnexion -->
-          <% } else { %>
-          <li><a href="/admin">Admin</a></li>
-          <li><a href="/logout">Déconnexion</a></li>
-          <% } %>
-        </ul>
-      </nav>
+    </div>
+    <ul id="menu-principal">
+      <li><a href="http://127.0.0.1:5500/front-end/index.html">Accueil</a></li>
+      <li><a href="/admin">Dashborad</a></li>
+    </ul>
+
+    <div class="btn_burger">
+      <div id="icons">
+        <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff"></i>
+      </div>
+      <div class="cross_burger">
+        <i class="fa-solid fa-xmark fa-2xl" style="color: #ffffff"></i>
+      </div>
     </div>
   </nav>
+
+  <div class="rs">
+    <a href="https://twitter.com/ZEventfr/header_photo"
+      ><i class="fa-brands fa-twitter fa-l" style="color: #ffffff"></i
+    ></a>
+    <a href="https://www.instagram.com/zeventfr/?hl=fr"
+      ><i class="fa-brands fa-instagram fa-l" style="color: #ffffff"></i
+    ></a>
+    <a href="https://www.reddit.com/r/zevent/"
+      ><i class="fa-brands fa-reddit-alien fa-l" style="color: #ffffff"></i
+    ></a>
+  </div>
 </header>

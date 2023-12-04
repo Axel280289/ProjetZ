@@ -9,13 +9,15 @@
       href="https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/styles/backOffice.css" />
     <link rel="stylesheet" href="/styles/style.css" />
     <title>Document</title>
   </head>
   <body>
+    <%- include('../../components/header.ejs') %>
     <div class="listMenu">
-      <a href="">Dashboard</a>
-      <a href="">Ajouter unutilisateur</a>
+      <a href="/admin">Dashboard</a>
+      <a href="/users/create">Ajouter un utilisateur</a>
     </div>
     <main class="listUser">
       <h2>Liste des utilisateurs</h2>
@@ -32,10 +34,14 @@
           </td>
           <td data-label="email"><%= user.email %></td>
           <td data-label="Action">
-            <a href="/users/<%= user._id %>/update">Modifier</a>
+            <a class="bgGreen" href="/users/<%= user._id %>/update"
+              ><i class="fa-regular fa-pen-to-square" style="color: #ffffff"></i
+            ></a>
           </td>
           <td data-label="Action">
-            <a href="/users/<%= user._id %>/delete">Supprimer</a>
+            <a class="bgRed" href="/users/<%= user._id %>/delete"
+              ><i class="fa-solid fa-trash-can" style="color: #ffffff"></i
+            ></a>
           </td>
         </tr>
         <% }) %>
@@ -43,5 +49,10 @@
       <% } %>
     </main>
     <script src="/scripts/burger.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a00d3e0d3e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/scripts/header.js"></script>
   </body>
 </html>
