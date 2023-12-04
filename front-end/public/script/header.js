@@ -1,7 +1,7 @@
 /* Menu burger header */
-document.getElementById('header').innerHTML = `
+document.getElementById("header").innerHTML = `
             <nav id="nav" class="">
-                <img class="logo" src="../public/images/zevent-logo.webp" alt="Logo du Zevent">
+                <img class="logo" src="./public/images/zevent-logo.webp" alt="Logo du Zevent">
                 <div id="menu-icone">
                     <div id="logo-menu">
                         <a href=""><i class="fa-solid fa-house fa-2xl" style="color: #ffffff;"></i></a>
@@ -25,20 +25,19 @@ document.getElementById('header').innerHTML = `
                     <a href="https://twitter.com/ZEventfr/header_photo"><i class="fa-brands fa-twitter fa-l" style="color: #ffffff;"></i></a>
                     <a href="https://www.instagram.com/zeventfr/?hl=fr"><i class="fa-brands fa-instagram fa-l" style="color: #ffffff;"></i></a>
                     <a href="https://www.reddit.com/r/zevent/"><i class="fa-brands fa-reddit-alien fa-l" style="color: #ffffff;"></i></a>
-            </div>`
+            </div>`;
 
-            const links = document.querySelectorAll('#nav li');
-            const nav = document.getElementById('nav');
-            const icons = document.getElementById('icons');
-            console.log(links);
-            
-            icons.addEventListener("click", () =>{
-                nav.classList.toggle("active");
-            })
-            
-            links.forEach((link) => {
-                link.addEventListener("click", () =>{
-                    nav.classList.remove("active");
-                })
-            })
-            
+const links = document.querySelectorAll("#nav li");
+const nav = document.getElementById("nav");
+const icons = document.getElementById("icons");
+console.log(links);
+
+icons.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active");
+  });
+});

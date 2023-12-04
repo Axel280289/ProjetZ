@@ -3,21 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href=/styles/backOffice.css /> <link rel="stylesheet"
+    href=/styles/style.css />
     <title>Dashboard</title>
   </head>
   <body>
     <%- include('../components/header.ejs') %>
     <main class="dashboard">
       <section>
-        <h2>Admin dasboard Dashboard</h2>
+        <h1>Admin Dashboard</h1>
         <div>
-          <a href="/users">Liste Utilisateurs</a>
-          <a href="/users/create">Créer un utilisateur</a>
+          <h3>Utilisateurs</h3>
+          <a href="/users">Liste</a>
+        </div>
+        <div>
+          <h3>Historiques</h3>
+          <a href="/historiques">Liste</a>
+        </div>
+        <div>
+          <h3>Streamers</h3>
+          <a href="/streamers">Liste</a>
+        </div>
+        <div>
+          <h3>jeux-vidéos</h3>
+          <a href="/videos">Liste</a>
         </div>
       </section>
     </main>
     <%- include('../components/footer.ejs') %>
     <script src="/scripts/burger.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a00d3e0d3e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/scripts/header.js"></script>
   </body>
 </html>

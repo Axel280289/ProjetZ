@@ -146,3 +146,17 @@ header #logo-menu {
     margin: 5px;
   }
 }
+
+.logout {
+  position: absolute;
+  font-size: 1.5rem;
+  right: 60px;
+  top: 10px;
+}
+
+@media (min-width: 405px) {
+  .logout {
+    right: 10px;
+    top: 10px;
+  }
+}
