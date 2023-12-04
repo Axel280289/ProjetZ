@@ -3,6 +3,10 @@ footer {
     position: 0 0 0;
 }
 
+h2 {
+    color: rgba(112,208,56,1);
+}
+
 body {
     background-color: rgba(32,32,32,1);
 }
@@ -35,10 +39,6 @@ strong {
     color: rgba(112,208,56,1);
 }
 
-.details {
-    color: rgba(112,208,56,1);
-}
-
 .learnmore {
     color: rgba(112,208,56,1);
 }
@@ -64,6 +64,15 @@ strong {
     color: black;
 }
 
+.sizing {
+    background-color: white; 
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(112,208,56,1);
+    border-radius: 5%;
+    color: black;
+}
+
 .deliverydelay {
     background-color: black;
     border-width: 2px;
@@ -73,12 +82,90 @@ strong {
     color: white;
 }
 
-.dimensions {
+.dimension {
     background-color: black;
     border-width: 2px;
     border-style: solid;
     border-color: white;
     border-radius: 10%;
+    color: white;
+}
+
+.cart {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    color: white;
+}
+
+.manufacturing {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    color: white;
+}
+
+.detail {
+    color: rgba(112,208,56,1);
+}
+
+.impression {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    color: white;
+}
+
+.design {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    color: white;
+}
+
+.composition {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    color: white;
+}
+
+.divcomposition {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    color: white;
+}
+
+
+
+.size {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    color: white;
+}
+
+.washing {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    color: white;
 }
 
 .asso {
@@ -93,6 +180,7 @@ strong {
     min-width: 280px;
     height: 100%;
     min-height: 280px;
+    border-radius: 15%;
 }
 
 .seacleaners {
