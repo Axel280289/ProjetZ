@@ -4,7 +4,7 @@ footer {
 }
 
 body {
-    background-color: grey;
+    background-color: rgba(32,32,32,1);
 }
 
 .logofooter {
@@ -35,12 +35,50 @@ strong {
     color: rgba(112,208,56,1);
 }
 
-a {
+.details {
     color: rgba(112,208,56,1);
+}
+
+.learnmore {
+    color: rgba(112,208,56,1);
+}
+
+.help {
+    color: white;
 }
 
 .faq {
     background-color: rgba(112,208,56,1);
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(112,208,56,1);
+    border-radius: 5%;
+}
+
+.consultfaq {
+    background-color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10%;
+    color: black;
+}
+
+.deliverydelay {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    color: white;
+}
+
+.dimensions {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
 }
 
 .asso {
@@ -59,18 +97,22 @@ a {
 
 .seacleaners {
     background-color: black;
+    border-radius: 10%;
 }
 
 .wwf {
     background-color: black;
+    border-radius: 10%;
 }
 
 .lpo {
     background-color: black;
+    border-radius: 10%;
 }
 
 .seasheperd {
     background-color: black;
+    border-radius: 10%;
 }
 
 .logoinsta {
