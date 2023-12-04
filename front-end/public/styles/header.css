@@ -58,21 +58,21 @@ header nav.active #icons .cross_burger {
 }
 
 
-header nav.active ul {
-  margin-top: 450px;
+header #nav.active ul {
+  margin-top: 80px;
 }
 
-header nav {
+header #nav {
   height: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-header nav ul {
+header #nav ul {
   display: none;
 }
 
-header nav.active ul {
+header #nav.active ul {
   display: block;
   position: fixed;
   width: 100%;
@@ -137,7 +137,7 @@ header #logo-menu {
     display: none;
   }
 
-  header #menu-principal{
+  header  #nav #menu-principal{
     display: block;
     display: flex;
     gap: 0px;
