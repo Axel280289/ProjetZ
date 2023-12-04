@@ -1,13 +1,18 @@
 /* En attente */
+
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-body {
-  background-color: black;
-}
-
+header {
+  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  }
 /* Mise en forme des liens menu  */
 
 header li {
@@ -21,58 +26,46 @@ header a {
 }
 
 header a:hover {
-  color: rgba(112, 208, 56, 1);
+  color: var(--secondary-color);
 }
 
 /* Dimension du logo */
 header .logo {
   position: absolute;
-  width: 40%;
+  height: 100%;
   top: 10px;
   left: 5px;
+  z-index: 1;
 }
 
 /* NavBar */
-
-header #burger {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-header #icons .btn_burger {
-  display: flex;
-  align-items: center;
-}
-
 header #icons {
-  position: relative;
-  top: 30px;
-  right: 5px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
 }
 
 header .cross_burger {
   display: none;
 }
 
-header nav.active #burger #icons .btn_burger {
+header nav.active #icons .btn_burger {
   display: none;
 }
 
-header nav.active #burger #icons .cross_burger {
-  display: flex;
-  align-items: center;
+header nav.active #icons .cross_burger {
+  display: block;
 }
+
 
 header nav.active ul {
   margin-top: 450px;
 }
 
 header nav {
+  height: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 header nav ul {
@@ -85,17 +78,25 @@ header nav.active ul {
   width: 100%;
   text-align: center;
   font-size: 1.3rem;
+  background-color: black;
 }
 
 /* placement RS */
 
 header .rs {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
   display: flex;
   justify-content: flex-end;
-  padding: 10px;
-  margin-top: 50px;
-  font-size: 1.2rem;
-  gap: 1%;
+  gap: 5px;
+  font-size: 1.4rem;
+  padding: 0px 5px;
+  background-color: var(--primary-color);
+}
+
+header .rs a {
+  margin: 2px;
 }
 
 header #logo-menu {
@@ -107,35 +108,27 @@ header #logo-menu {
     display: none;
   }
 
-  header .rs {
-    margin: 0;
-  }
   header #logo-menu {
     display: flex;
     gap: 5px;
-    margin-top: 10px;
   }
 
   header #menu-icone {
-    display: flex;
-    margin-left: 32%;
-    margin-top: 10px;
-    font-size: 1.1rem;
-  }
-
-  header .logo {
-    width: 30%;
+    position :absolute;
+    left: 130px;
+    top: 20px;
+    z-index: 1;
   }
 }
 
 @media (min-width: 700px) {
   header .logo {
     left: 42%;
-    width: 20%;
   }
 
-  header #menu-icone {
-    margin-left: 10px;
+  header #nav #menu-icone {
+    position: absolute;
+    left: 5px;
   }
 }
 
@@ -154,16 +147,3 @@ header #logo-menu {
     margin: 5px;
   }
 }
-/*  nav ul {
-        display: flex;
-        justify-content: space-between;
-        width: 60%;
-    }
-    
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        font-size: calc(0.5em + 1.5vw);
-    } */
