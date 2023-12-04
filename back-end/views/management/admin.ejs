@@ -3,17 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/index.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Dashboard</title>
   </head>
   <body>
     <%- include('../components/header.ejs') %>
-    <section class="dashboard">
-      <h2>Utilisateur</h2>
-      <a href="/users">Liste des utilisateurs</a>
-      <a href="/users/create">Créer un utilisateur</a>
-    </section>
-
+    <main class="dashboard">
+      <section>
+        <h2>Admin dasboard Dashboard</h2>
+        <div>
+          <a href="/users">Liste Utilisateurs</a>
+          <a href="/users/create">Créer un utilisateur</a>
+        </div>
+      </section>
+    </main>
     <%- include('../components/footer.ejs') %>
     <script src="/scripts/burger.js"></script>
   </body>
