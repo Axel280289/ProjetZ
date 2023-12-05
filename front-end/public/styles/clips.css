@@ -4,7 +4,8 @@
   padding: 0;
 }
 body {
-    color: white;}
+  color: white;
+}
 .container-sideBar {
   background-color: var(--primary-color);
   width: 100%;
