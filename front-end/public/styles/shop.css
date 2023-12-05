@@ -1,0 +1,234 @@
+footer {
+    height: 100%;
+    position: 0 0 0;
+}
+
+h2 {
+    color: rgba(112,208,56,1);
+}
+
+body {
+    background-color: rgba(32,32,32,1);
+}
+
+.logofooter {
+    width: 100%;
+    min-width: 280px;
+    height: 100%;
+    min-height: 280px;
+}
+
+.foot {
+    background-color: black;
+}
+
+p {
+    color: white;
+}
+
+i {
+    color: white;
+}
+
+.endpage {
+    text-align: center;
+    background-color: black;
+}
+
+strong {
+    color: rgba(112,208,56,1);
+}
+
+.learnmore {
+    color: rgba(112,208,56,1);
+}
+
+.help {
+    color: white;
+}
+
+.faq {
+    background-color: rgba(112,208,56,1);
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(112,208,56,1);
+    border-radius: 5%;
+}
+
+.consultfaq {
+    background-color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10%;
+    color: black;
+}
+
+.sizing {
+    background-color: white; 
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(112,208,56,1);
+    border-radius: 5%;
+    color: black;
+}
+
+.deliverydelay {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    color: white;
+}
+
+.dimension {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    color: white;
+}
+
+.cart {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    color: white;
+}
+
+.manufacturing {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    color: white;
+}
+
+.detail {
+    color: rgba(112,208,56,1);
+}
+
+.impression {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    color: white;
+}
+
+.design {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    color: white;
+}
+
+.composition {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    color: white;
+}
+
+.divcomposition {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    color: white;
+}
+
+
+
+.size {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    color: white;
+}
+
+.washing {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+    color: white;
+}
+
+.asso {
+    width: 100%;
+    min-width: 280px;
+    height: 100%;
+    min-height: 280px;
+}
+
+.prod {
+    width: 100%;
+    min-width: 280px;
+    height: 100%;
+    min-height: 280px;
+    border-radius: 15%;
+}
+
+.seacleaners {
+    background-color: black;
+    border-radius: 10%;
+}
+
+.wwf {
+    background-color: black;
+    border-radius: 10%;
+}
+
+.lpo {
+    background-color: black;
+    border-radius: 10%;
+}
+
+.seasheperd {
+    background-color: black;
+    border-radius: 10%;
+}
+
+.logoinsta {
+    width: 10%;
+    min-width: 28px;
+    height: 10%;
+    min-height: 28px;
+    background-color: black;
+}
+
+.reseau {
+    background-color: black;
+}
+
+.buynow {
+    background-color: white;
+    color: black;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(112,208,56,1);
+    border-radius: 10%;
+}
+
+span p {
+    background-color: black;
+    color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10%;
+}
