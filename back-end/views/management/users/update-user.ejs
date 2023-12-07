@@ -3,50 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href=/styles/backOffice.css />
+    <link rel="stylesheet" href="/styles/style.css" />
+
     <title>Document</title>
   </head>
   <body>
-    <%- include('../../components/header.ejs') %> <% if(successUpdateUser) %>
-    <p><%= successUpdateUser %></p>
+    <%- include('../../components/header.ejs') %>
+    <main class="updateUser">
+      <h2>
+        Mise à jour de l'utilisateur <%= `${detailsUser.lastname}
+        ${detailsUser.firstname}` %>
+      </h2>
 
-    <main class="createUser">
-      <h2>Mise à jour d'un utilisateur</h2>
+      <% if(successUpdateUser) %>
+      <p><%= successUpdateUser %></p>
+
       <form
+        class="connect"
         action="/users/<%= detailsUser._id %>/update?_method=PUT"
         method="POST"
       >
         <div>
-          <label for="lastname">Nom</label>
           <input
             type="text"
             id="lastname"
             name="lastname"
             value="<%= detailsUser ? detailsUser.lastname : '' %>"
           />
+          <label for="lastname">Nom</label>
         </div>
         <div>
-          <label for="firstname">Prénom</label>
           <input
             type="text"
             id="firstname"
             name="firstname"
             value="<%= detailsUser ? detailsUser.firstname : '' %>"
           />
+          <label for="firstname">Prénom</label>
         </div>
         <div>
-          <label for="email">Email</label>
           <input
             type="email"
             id="email"
             name="email"
             value="<%= detailsUser ? detailsUser.email : '' %>"
           />
+          <label for="email">Email</label>
         </div>
-        <button>Modifier</button>
+
+        <% if (fullAccess === "adminPrincipal") { %>
+        <div>
+          <input type="password" id="password" name="password" />
+          <label for="password">Mot de passe</label>
+        </div>
+        <!--  // Code à exécuter si l'utilisateur a un accès complet et est un administrateur principal -->
+        <% } else { %>
+        <!-- Code à exécuter si l'utilisateur n'a pas un accès complet ou n'est pas un administrateur principal -->
+        <% } %>
+
+        <button>Mettre a jours</button>
+        <a href="/users">Revenir a la liste des utilisateur</a>
       </form>
     </main>
     <%- include('../../components/footer.ejs') %>
     <script src="/scripts/burger.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a00d3e0d3e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/scripts/header.js"></script>
   </body>
 </html>

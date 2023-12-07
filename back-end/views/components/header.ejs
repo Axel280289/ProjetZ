@@ -10,7 +10,13 @@
 </html>
 <header id="header">
   <div class="logout">
-    <i class="fa-solid fa-power-off" style="color: #1ee718"></i>
+    <% if(!isConnected) { %>
+    <!-- Si l'utilisateur est connecté il peut accéder aux pages Admin et Déconnexion -->
+    <% } else { %>
+    <a href="/logout"
+      ><i class="fa-solid fa-power-off" style="color: #1ee718"></i
+    ></a>
+    <% } %>
   </div>
   <nav id="nav" class="">
     <img class="logo" src="/images/zevent-logo.webp" alt="Logo du Zevent" />
@@ -26,7 +32,11 @@
     </div>
     <ul id="menu-principal">
       <li><a href="http://127.0.0.1:5500/front-end/index.html">Accueil</a></li>
-      <li><a href="/admin">Dashborad</a></li>
+      <% if(!isConnected) { %>
+      <!-- Si l'utilisateur est connecté il peut accéder aux pages Admin et Déconnexion -->
+      <% } else { %>
+      <li><a href="/admin">Dashboard</a></li>
+      <% } %>
     </ul>
 
     <div class="btn_burger">

@@ -5,10 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Légere description" />
     <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/backOffice.css" />
+
     <title>Document</title>
   </head>
   <body>
-    <%- include('./views/components/header.ejs') %> <%-
-    include('./views/components/footer.ejs') %>
+    <%- include('./views/components/header.ejs') %>
+    <main class="mainIndex">
+      <div class="indexBack">
+        <form class="connect" action="/signin/login" method="POST">
+          <div>
+            <input type="email" id="email" name="email" />
+            <label for="email">E-mail</label>
+          </div>
+          <div>
+            <input type="password" id="password" name="password" />
+            <label for="password">Mot de passe</label>
+          </div>
+          <button>Se connecter</button>
+        </form>
+      </div>
+    </main>
+    <script src="/scripts/burger.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a00d3e0d3e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/scripts/header.js"></script>
   </body>
 </html>

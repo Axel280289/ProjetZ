@@ -153,6 +153,7 @@ header #logo-menu {
   right: 60px;
   top: 10px;
 }
+/* Media queries */
 
 @media (min-width: 405px) {
   .logout {

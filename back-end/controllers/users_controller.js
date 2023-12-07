@@ -6,6 +6,7 @@ const bcrypt = require("bcrypt");
 // J'importe les middlewares dont j'ai besoin
 const verifInputs = require("../middlewares/verifInputs");
 const findUserByMail = require("../middlewares/findUserByMail");
+const { log } = require("console");
 
 // Fonction pour récupérer les informations d'un utilisateur grâce à son identifiant
 const findUserById = async (id) => {
@@ -169,14 +170,18 @@ exports.modifyUser = async (req, res, next) => {
   const successUpdateUser = req.session.successUpdateUser
     ? req.session.successUpdateUser
     : null;
+  req.session.successUpdateUser = null;
   const isConnected = req.session.isConnected ? req.session.isConnected : false;
+  const fullAccess = req.session.fullaccess ? req.session.fullaccess : "";
 
+  // console.log(fullAccess);
   res
     .status(200)
     .render(path.join(__dirname, `../views/management/users/update-user.ejs`), {
       detailsUser,
       successUpdateUser,
       isConnected,
+      fullAccess,
     });
 };
 

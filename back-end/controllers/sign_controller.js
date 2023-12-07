@@ -126,6 +126,7 @@ exports.login = async (req, res) => {
             // Je crée mes variable de session (userConnected => message accueil, isConnected => navigation header dynamique)
             req.session.userConnected = `Bienvenue ${user.lastname} ${user.firstname}`;
             req.session.isConnected = true;
+            req.session.fullaccess = user.fullaccess;
 
             // Je crée mon token d'authentification grâce à JsonWebToken, en lui définissant un id utilisateur, une clé de décryptage, et la durée d'existance du token
             const token = jwt.sign(
@@ -142,7 +143,7 @@ exports.login = async (req, res) => {
             });
 
             // Je redirige vers l'accueil
-            res.status(200).redirect("/");
+            res.status(200).redirect("/admin");
 
             // Si la comparaison échoue on affiche un message
           } else {

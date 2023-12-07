@@ -16,3 +16,29 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background: var(--primary-color);
+  color: var(--tertiaire-color);
+  font-family: var(--main-font);
+}
+
+body {
+  background: var(--primary-color);
+  color: var(--tertiaire-color);
+  height: 100vh;
+  position: relative;
+  font-family: var(--main-font);
+}
+footer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  gap: 10px;
+  bottom: 15px;
+  left: 50%;
+  transform: translate(-50%);
+}
+footer img {
+  width: 100px;
+}
