@@ -41,6 +41,10 @@
 }
 
 /* Admin */
+
+.dashboard {
+  height: 100%;
+}
 .dashboard section h1 {
   margin-top: 50px;
   text-align: center;
@@ -161,6 +165,18 @@ body {
   scrollbar-track-color: #000000; /* Couleur de la piste de la barre de défilement */
 }
 
+.radioFull {
+  display: flex;
+  width: 280px;
+  align-items: center;
+  justify-content: center;
+}
+
+#admin,
+#adminPrincipal {
+  width: 50px;
+}
+
 /* update user */
 
 .updateUser {
@@ -230,6 +246,64 @@ body {
   box-shadow: var(--secondary-color) 2px 2px 15px 2px inset;
 }
 
+/* delete User */
+
+.deleteContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 200px;
+}
+.deleteContainer h1 {
+  font-size: 1.5rem;
+  font-family: var(--title-font);
+  max-width: 85%;
+}
+.deleteContainer h2 {
+  font-size: 1rem;
+  font-family: var(--title-font);
+  max-width: 75%;
+}
+.deleteContainer {
+  text-align: center;
+}
+.deleteContainer form a {
+  padding: 8px 45px;
+  background: var(--tertiaire-color);
+  border: 2px solid var(--tertiaire-color);
+  border-radius: 10px;
+  margin: 0 auto;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: black 1px 1px 15px 1px inset;
+}
+.deleteContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 330px;
+}
+.deleteContainer form button {
+  padding: 10px 45px;
+  background: red;
+  border: 2px solid var(--tertiaire-color);
+  border-radius: 10px;
+  margin: 0 auto;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: black 1px 1px 15px 1px inset;
+}
+.deleteContainer form button:hover {
+  background-color: brown;
+  color: var(--tertiaire-color);
+}
+.deleteContainer form a:hover {
+  background: var(--secondary-color);
+  color: var(--tertiaire-color);
+}
 /* Media Queries */
 
 @media (min-width: 400px) {
@@ -253,5 +327,15 @@ body {
   .connect button,
   .connect a {
     width: 450px;
+  }
+}
+
+/* Create */
+
+/* deleteUser */
+
+@media (min-width: 700px) {
+  .deleteContainer form {
+    flex-direction: row;
   }
 }

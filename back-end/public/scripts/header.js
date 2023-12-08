@@ -15,4 +15,14 @@ links.forEach((link) => {
   });
 });
 
-//
+// deconnexion
+
+function openLogoutModal() {
+  const logoutModal = document.getElementById("logoutModal");
+  logoutModal.style.display = "block";
+}
+
+function closeLogoutModal() {
+  const logoutModal = document.getElementById("logoutModal");
+  logoutModal.style.display = "none";
+}

@@ -26,18 +26,16 @@ body {
 body {
   background: var(--primary-color);
   color: var(--tertiaire-color);
-  height: 100vh;
   position: relative;
   font-family: var(--main-font);
 }
 footer {
   display: flex;
   align-items: center;
-  position: absolute;
+  justify-content: center;
   gap: 10px;
   bottom: 15px;
-  left: 50%;
-  transform: translate(-50%);
+  margin-top: 35px;
 }
 footer img {
   width: 100px;

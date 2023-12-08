@@ -4,32 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href=/styles/backOffice.css />
+    <link rel="stylesheet" href="/styles/style.css" />
     <title>Document</title>
   </head>
   <body>
     <%- include('../../components/header.ejs') %> <% if (successCreateUser) { %>
     <div role="alert"><%= successCreateUser %></div>
     <% } %>
-    <main class="create">
+    <main class="updateUser">
       <h2>Création d'un utilisateur</h2>
-      <form action="/users/create/add" method="POST">
+      <form class="connect" action="/users/create/add" method="POST">
         <div>
-          <label for="lastname">Nom</label>
           <input type="text" id="lastname" name="lastname" />
+          <label for="lastname">Nom</label>
         </div>
         <div>
-          <label for="firstname">Prénom</label>
           <input type="text" id="firstname" name="firstname" />
+          <label for="firstname">Prénom</label>
         </div>
         <div>
-          <label for="email">Email</label>
           <input type="email" id="email" name="email" />
+          <label for="email">Email</label>
         </div>
         <div>
-          <label for="birthdate">Votre date de naissance</label>
           <input type="date" id="birthdate" name="birthdate" />
+          <label for="birthdate">Votre date de naissance</label>
         </div>
         <div>
+          <input type="password" id="password" name="password" />
+          <label for="password">Mot de passe</label>
+        </div>
+        <div>
+          <input type="password" id="confirm" name="confirm" />
+          <label for="confirm">Confirmation Mot de passe</label>
+        </div>
+        <div class="radioFull">
+          <label for="adminPrincipal">Admin Principal</label>
           <input
             type="radio"
             id="adminPrincipal"
@@ -37,25 +47,20 @@
             value="adminPrincipal"
             checked
           />
-          <label for="adminPrincipal">Admin Principal</label>
-        </div>
-        <div>
-          <input type="radio" id="admin" name="fullaccess" value="admin" />
+
           <label for="admin">Admin</label>
-        </div>
-        <div>
-          <label for="password">Mot de passe</label>
-          <input type="password" id="password" name="password" />
-        </div>
-        <div>
-          <label for="confirm">Confirmation Mot de passe</label>
-          <input type="password" id="confirm" name="confirm" />
+          <input type="radio" id="admin" name="fullaccess" value="admin" />
         </div>
 
         <button>Créer</button>
       </form>
+      <%- include('../../components/logout.ejs') %>
     </main>
-    <%- include('../../components/footer.ejs') %>
     <script src="/scripts/burger.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a00d3e0d3e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/scripts/header.js"></script>
   </body>
 </html>

@@ -13,8 +13,8 @@
     <% if(!isConnected) { %>
     <!-- Si l'utilisateur est connecté il peut accéder aux pages Admin et Déconnexion -->
     <% } else { %>
-    <a href="/logout"
-      ><i class="fa-solid fa-power-off" style="color: #1ee718"></i
+    <a href="#" onclick="openLogoutModal()">
+      <i class="fa-solid fa-power-off" style="color: #1ee718"></i
     ></a>
     <% } %>
   </div>
@@ -22,16 +22,16 @@
     <img class="logo" src="/images/zevent-logo.webp" alt="Logo du Zevent" />
     <div id="menu-icone">
       <div id="logo-menu">
-        <a href=""
+        <a href="http://127.0.0.1:5500/front-end/index.html"
           ><i class="fa-solid fa-house fa-2xl" style="color: #ffffff"></i
         ></a>
-        <a href=""
+        <a href="/admin"
           ><i class="fa-solid fa-building fa-2xl" style="color: #ffffff"></i
         ></a>
       </div>
     </div>
     <ul id="menu-principal">
-      <li><a href="http://127.0.0.1:5500/front-end/index.html">Accueil</a></li>
+      <li><a href="http://127.0.0.1:5500/front-end/index.html">Site</a></li>
       <% if(!isConnected) { %>
       <!-- Si l'utilisateur est connecté il peut accéder aux pages Admin et Déconnexion -->
       <% } else { %>

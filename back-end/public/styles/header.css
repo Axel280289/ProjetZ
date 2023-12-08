@@ -94,12 +94,86 @@ header .rs {
   background-color: var(--primary-color);
 }
 
+.rs .fa-brands {
+  border: 1px solid var(--tertiaire-color);
+  padding: 1px;
+  border-radius: 5px;
+}
+
+.rs .fa-brands:hover {
+  background: var(--secondary-color);
+}
+
 header .rs a {
   margin: 2px;
 }
 
 header #logo-menu {
   display: none;
+}
+
+.logout-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 2px solid var(--secondary-color);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--secondary-color) 2px 2px 15px 2px inset;
+  z-index: 1000; /* Assurez-vous que la boîte de dialogue est au-dessus des autres éléments */
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.modal-content form a {
+  padding: 8px 10px;
+  background: var(--tertiaire-color);
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 70%;
+  margin: 0 auto;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+}
+.modal-content form button {
+  padding: 10px 10px;
+  background: red;
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 70%;
+  margin: 0 auto;
+  font-weight: 600;
+  cursor: pointer;
+}
+.modal-content form button:hover {
+  background-color: brown;
+}
+.modal-content form a:hover {
+  background: var(--secondary-color);
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.modal-content p {
+  margin-bottom: 20px;
+  color: var(--tertiaire-color);
+  text-align: center;
+  width: 100%;
 }
 
 @media (min-width: 405px) {

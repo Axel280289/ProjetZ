@@ -58,6 +58,17 @@ a:visited {
   color: var(--tertiaire-color);
 }
 
+.plus {
+  display: block;
+  padding: 15px;
+  background: var(--secondary-color);
+  width: 260px;
+  margin: 10px auto;
+  color: var(--tertiaire-color);
+  text-decoration: none;
+  text-align: center;
+  border-radius: 15px;
+}
 .ongletAsso {
   display: flex;
   flex-wrap: wrap;
@@ -117,11 +128,25 @@ li {
   text-decoration: none;
   padding: 15px 0;
   border-radius: 8px;
-  width: 100%;
+  width: 280px;
+  margin: 0 auto;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.466) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.486) 0px -2px 6px 0px inset;
   background-color: var(--secondary-color);
+}
+
+.logoAsso {
+  width: 260px;
+  margin-top: 35px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.frame {
+  display: flex;
+  justify-content: center;
+  margin-block: 15px;
 }
 
 /* onglet */
@@ -130,4 +155,12 @@ li {
   background-color: var(--secondary-color);
   color: var(--tertiaire-color);
 }
-/* Couleur de fond pour l'onglet actif */
+
+/* MediaQueries */
+
+@media (min-width: 700px) {
+  iframe {
+    width: 450px;
+    height: 300px;
+  }
+}
