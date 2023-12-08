@@ -1,3 +1,8 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
 footer {
     height: 100%;
     position: 0 0 0;
@@ -5,10 +10,55 @@ footer {
 
 h2 {
     color: rgba(112,208,56,1);
+    text-align: center;
+}
+
+h3 {
+    background-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    color: white;
+    text-align: center;
+}
+
+img {
+    min-width: 250px;
+    min-height: auto;
+    max-width: max-content;
+    max-height: max-content;
+}
+
+.number {
+    border-style: solid;
+    border-width: 3px;
+    border-color: white;
+    border-radius: 10%;
+
+}
+
+div > p {
+    text-align: center;
+}
+
+button {
+    color: white;
+    background-color: black;
+}
+
+.divshopdetail {
+    background-color: rgba(32,32,32,1);
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    color: white;
 }
 
 body {
     background-color: rgba(32,32,32,1);
+    width: 100%;
+    height: 100%;
+    
 }
 
 .logofooter {
@@ -64,12 +114,12 @@ strong {
     color: black;
 }
 
-.sizing {
+label {
     background-color: white; 
     border-width: 2px;
     border-style: solid;
     border-color: rgba(112,208,56,1);
-    border-radius: 5%;
+    border-radius: 15%;
     color: black;
 }
 
@@ -231,4 +281,8 @@ span p {
     border-style: solid;
     border-color: white;
     border-radius: 10%;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
 }

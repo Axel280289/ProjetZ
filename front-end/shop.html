@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
+    <!-- <header>
         <div>
             <nav id="nav" class="">
                 <img class="logo header" src="./public/images/other img/zevent-logo.webp" alt="Logo du Zevent">
@@ -30,7 +30,7 @@
                     <i class="fa-brands fa-reddit-alien fa-xl" style="color: #ffffff;"></i>
                 </div>
         </div>
-    </header>
+    </header> -->
     <main>
         <section class="shop">
             <div class="teeshirt">
@@ -41,17 +41,33 @@
                 <strong>Tailles</strong>
                 <p>Sélectionnez une taille</p>
                 <div class="allsize">
-                    <a href="xs" class="sizing">XS</a>
-                    <a href="s" class="sizing">S</a>
-                    <a href="m" class="sizing">M</a>
-                    <a href="l" class="sizing">L</a>
-                    <a href="xl" class="sizing">XL</a>
-                    <a href="xxl" class="sizing">XXL</a>
-                    <a href="xxxl" class="sizing">XXXL</a>
+                <form>
+                    <label>
+                        <input type="" name="size" valeur="xs"> 
+                    </label>
+                    <label>
+                        <input type="radio" name="size" valeur="s"> 
+                    </label>
+                    <label>
+                        <input type="radio" name="size" valeur="m"> 
+                    </label>
+                    <label>
+                        <input type="radio" name="size" valeur="l"> 
+                    </label>
+                    <label>
+                        <input type="radio" name="size" valeur="xl"> 
+                    </label>
+                    <label>
+                        <input type="radio" name="size" valeur="xxl"> 
+                    </label>
+                    <label>
+                        <input type="radio" name="size" valeur="xxxl"> 
+                    </label>
+                </form>
                 </div>
                 <strong>Quantité</strong>
-                <div><p>1</p></div>
-                <a href="shop details.html" class="buynow" >Acheter maintenant</a>
+                <div class="number"><button>+</button><p>1</p><button>-</button></div>
+                <a href="./shop details.html" class="buynow" >Acheter maintenant</a>
                 <a href="./shop details.html" class="composition" >Composition & Fabrication</a>
                 <a href="./shop details.html" class="deliverydelay" >Délais de livraison</a>
                 <a href="./shop details.html" class="size" >Taille</a>
@@ -64,8 +80,8 @@
                 <strong>Précommande</strong>
                 <p>€60,00 Taxes incluses</p>
                 <strong>Quantité</strong>
-                <div><p>1</p></div>
-                <a href="shop details.html" class="buynow" >Acheter maintenant</a>
+                <div class="number"><button>+</button><p>1</p><button>-</button></div>
+                <a href="./shop details.html" class="buynow" >Acheter maintenant</a>
                 <a href="./shop details.html" class="dimension" >Dimensions</a>
                 <a href="./shop details.html" class="manufacturing">Fabrications</a>
                 <a href="./shop details.html" class="impression" >Impression</a>
@@ -78,8 +94,8 @@
                 <strong>Précommande</strong>
                 <p>€175,00 Taxes incluses</p>
                 <strong>Quantité</strong>
-                <P>-1+</P>
-                <a href="shop details.html" class="buynow" >Acheter maintenant</a>
+                <div class="number"><P>1</P></div>
+                <a href="./shop details.html" class="buynow" >Acheter maintenant</a>
                 <a href="./shop details.html" class="deliverydelay" >Délais de livraison</a>
                 <a href="./shop details.html" class="dimension" >Dimensions</a>
                 <a href="./shop details.html" class="cart" >Mise en panier</a>
@@ -92,25 +108,25 @@
                 <img class="asso" src="./public/images/other img/sea-sheperd-.webp" alt="Logo Sea Sheperd">
                 <strong>Sea Sheperd</strong>
                 <p>Défend activement l'océan et toutes les formes de vie marine depuis 1977.</p>
-                <a href="En savoir plus" class="learnmore">En savoir plus -></a>
+                <a href="./associations.html" class="learnmore">En savoir plus -></a>
             </div>
             <div class="lpo">
                 <img class="asso" src="./public/images/other img/lpo.webp" alt="Logo LPO">
                 <strong>LPO</strong>
                 <p>La LPO oeuvre au quotidien pour la protection des oiseaux et de l'ensemble du vivant.</p>
-                <a href="En savoir plus" class="learnmore">En savoir plus -></a>
+                <a href="./associations.html" class="learnmore">En savoir plus -></a>
             </div>
             <div class="wwf">
                 <img class="asso" src="./public/images/other img/wwf-.webp" alt="Logo WWF">
                 <strong>WWF</strong>
                 <p>Travaille dans plus de 100 pays, pour protéger la planète, la nature et tous ses êtres vivants</p>
-                <a href="En savoir plus" class="learnmore">En savoir plus -></a>
+                <a href="./associations.html" class="learnmore">En savoir plus -></a>
             </div>
             <div class="seacleaners">
                 <img class="asso" src="./public/images/other img/the-seacleaners-.webp" alt="Logo SeaCleaners">
                 <strong>Sea Cleaners</strong>
                 <p>Lutte contre la pollution plastique des océans grâce à des actions à terre et en mer.</p>
-                <a href="En savoir plus" class="learnmore">En savoir plus -></a>
+                <a href="./associations.html" class="learnmore">En savoir plus -></a>
             </div>
         </section>
         <div class="faq">
@@ -119,7 +135,7 @@
             <strong>Besoin d'aide ?</strong>
             <p>Consultez notre FAQ, la réponse à votre question s'y trouve certainement!</p>
             <p>Pour toute autre question, contactez-nous via le chat situé en bas a droite</p>
-            <a href="Consulter la FAQ" class="consultfaq" >Consulter la FAQ</a>
+            <a href="./associations.html" class="consultfaq" >Consulter la FAQ</a>
         </div>
         <div class="foot">
             <strong>Shop</strong>
@@ -138,7 +154,7 @@
     </main>
     <footer>
             <p class="endpage">@Zevent</p>
+            <image class="card" src="./public/images/other img/visa.svg">Master Card</image>
     </footer>
-    <script src="https://kit.fontawesome.com/5aba8f7921.js" crossorigin="anonymous"></script>
 </body>
 </html>
