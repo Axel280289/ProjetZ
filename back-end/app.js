@@ -15,6 +15,7 @@ const homeRoutes = require("./routes/home");
 const usersRoutes = require("./routes/user");
 const adminRoutes = require("./routes/admin");
 const signRoutes = require("./routes/sign");
+const jvRoutes = require("./routes/jv");
 const errorRoutes = require("./routes/error");
 
 // J'utilise la méthode urlencoded pour récupérer les informations d'un formulaire et les stocker dans req.body
@@ -64,6 +65,7 @@ app.use(homeRoutes);
 app.use(signRoutes);
 app.use(adminRoutes);
 app.use(usersRoutes);
+app.use(jvRoutes);
 app.use(errorRoutes);
 
 // J'écoute les informations émis par mon application (app) avec la méthode listen, sans cette méthode le serveur ne peut fonctionner
