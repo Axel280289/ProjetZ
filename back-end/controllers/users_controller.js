@@ -175,6 +175,7 @@ exports.modifyUser = async (req, res, next) => {
   const fullAccess = req.session.fullaccess ? req.session.fullaccess : "";
 
   // console.log(fullAccess);
+
   res
     .status(200)
     .render(path.join(__dirname, `../views/management/users/update-user.ejs`), {
@@ -249,15 +250,10 @@ exports.deleteUser = async (req, res) => {
   }
 };
 
-// équivaut à
-// module.exports = { createUser, getUsers, getUserById, updateUser, deleteUser }
-// module.exports = { verifInputs, findUserByMail, findAddress, createAddress}
-
 /*
  req.locals => permet de récupérer des informations afin de les stocker d'une requête http vers elle-même (get > get)
  req.session => permet de récupérer des informations afin de les stocker entre deux type de requête différent (post => get, put => get, delete => get)
 */
-
 /*
     Méthodes mongoose
     ----------------------

@@ -1,7 +1,7 @@
 /* Menu burger header */
 document.getElementById("header").innerHTML = `
             <nav id="nav" class="">
-                <img class="logo" src="./public/images/zevent-logo.webp" alt="Logo du Zevent">
+                <img class="logo" src="/images/zevent-logo.webp" alt="Logo du Zevent">
                 <div id="menu-icone">
                     <div id="logo-menu">
                         <a href=""><i class="fa-solid fa-house fa-2xl" style="color: #ffffff;"></i></a>
@@ -11,10 +11,10 @@ document.getElementById("header").innerHTML = `
                     </div>
                 </div>
                 <ul id="menu-principal">
-                    <li><a href="">Accueil</a></li>
-                    <li><a href="">Les Associations</a></li>
-                    <li><a href="">Les clips</a></li>
-                    <li><a href="">Les stats</a></li>
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="/associations">Les Associations</a></li>
+                    <li><a href="/clips">Les clips</a></li>
+                    <li><a href="/stats">Les stats</a></li>
                 </ul>
                 <div id="icons">
                         <div class="btn_burger"><i  class="fa-solid fa-bars fa-2xl" style="color: #ffffff;"></i></div>

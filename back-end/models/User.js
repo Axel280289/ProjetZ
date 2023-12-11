@@ -20,16 +20,3 @@ userSchema.plugin(uniqueValidator);
 
 // J'exporte mon model en lui donnant un nom, lui associant son schéma ainsi que la collection de la base de données
 module.exports = mongoose.model("User", userSchema, "users");
-
-/*
-    Exemple d'un Document de la collection users
- {
-    "_id": klladb77510aa78
-    "lastname": "Doe",
-    "firstname": "John",
-    "mail": "jd@mail.com",
-    "password": "qsfqsfsqf",
-    "address": "qASD2487FDQlllk"
- }
-
-*/
