@@ -1,0 +1,63 @@
+
+<link rel="stylesheet" href="/styles/style.css">
+<link rel="stylesheet" href="/styles/historics.css">
+<link rel="stylesheet" href="/styles/header.css">
+<link rel="stylesheet" href="/styles/backOffice.css">
+
+<body>
+   <%- include('../../components/header.ejs') %> <% if (successCreateHistoric) { %>
+      <div role="alert"><%= successCreateHistoric %></div>
+      <% } %> 
+      
+   <main class="updateUser">
+
+      <section class="historics-container">
+
+         <h1>Ajouter un historique</h1>
+     
+               <form class="connect" action="/historics/create/add" method="POST">
+
+                  <div>
+                     <input type="date" id="date" name="date" required>
+                     <label for="date">
+                        Dates
+                     </label>
+                  </div>
+
+                  <div>
+                     <input type="number" id="amount" name="amount" minlength="1" required>
+                     <label for="amount">
+                        Montant
+                     </label>
+                  </div>
+
+                  <div>
+                     <input type="text" id="associations"  name="associations" minlength="1" required>
+                     <label for="associations">
+                        Associations
+                     </label>
+                  </div>
+
+                  <button class="create-historic-submit">
+                     Ajouter
+                  </button>
+
+                  <a href="/historics.ejs">Revenir à la liste des historiques</a>
+                  
+                  
+               </form>
+               
+      </section>
+   </main>
+
+   <footer>
+    <%- include('../../components/footer.ejs') %>
+   </footer>
+    <script src="/scripts/burger.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a00d3e0d3e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/scripts/header.js"></script>
+</body>
+</html>
