@@ -12,13 +12,7 @@ router.get('/historics', authMiddleware, verifUser, getHistorics);
 
 router.get('/historics/create', authMiddleware, verifUser, addHistoric);
 
-router.get('/historics/update', (req, res) => {
-    res.status(200).render(`${__dirname}/views/management/historic/update-historic.html`);
-});
 
-router.get('/historics/delete', (req, res) => {
-    res.status(200).render(`${__dirname}/views/management/historic/delete-historic.html`);
-});
 
 // liste des historiques (et détails)
 router.get('/historics' , getHistorics );
