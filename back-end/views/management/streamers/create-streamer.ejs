@@ -1,0 +1,47 @@
+<link rel="stylesheet" href=".././public/styles/streamers.css">
+<link rel="stylesheet" href=".././public/styles/index.css">
+
+<body>
+    
+    <main>
+
+        <h1>Ajouter un streamer</h1>
+        
+        <form action="/streamers/create/add" method="post" enctype="multipart/form-data">
+
+            <div>
+                <input type="text" id="streamer-name" required>
+                <label for="streamer-name">
+                    Nom streamer
+                </label>
+            </div>
+
+            <div>
+                <input type="url" id="streamer-channel" minlength="1" required>
+                <label for="streamer-channel">
+                    Chaîne twitch
+                </label>
+            </div>
+
+            <div>
+                <input type="file" accept="image/*" size="512000" id="streamer-avatar" required>
+                <label for="streamer-avatar">
+                    Avatar
+                </label>
+            </div>
+
+            <button class="streamer-form-button">
+                Ajouter
+            </button>
+
+            <div>
+                <a href="#">Revenir à la liste des streamers</a>
+            </div>
+        </form>
+
+    </main>
+
+    <%- include('../../components/footer.ejs') %>
+    <script src="/scripts/burger.js"></script>
+</body>
+</html>
