@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/backOffice.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Listes des jeux videos</title>
+  </head>
+  <body>
+    <header>
+    <%- include('../../components/header.ejs') %>
+      <div class="listMenu">
+        <a href="/admin">Dashboard</a>
+        <a href="/jv/create">Ajouter un jeu</a>
+      </div>
+    </header>
+    <main class="listUser">
+      <h2>Liste des jeux</h2>
+      <% if(successDeleteJv) { %>
+      <p><%= successDeleteJv %></p>
+      <% } %> <% if(jvs) { %>
+      <table>
+        <tr>
+          <th>Nom Du jeu</th>
+          <th>Url</th>
+          <th colspan="2">Actions</th>
+        </tr>
+        <% jvs.forEach(jv => { %>
+        <tr>
+          <td>
+            <a href="/jv/<%= jv._id %>"> <%= jv.titre %> </a>
+          </td>
+          <td><%= jv.url %></td>
+          <td data-label="Action">
+            <a class="bgGreen" href="/jv/<%= jv._id %>/update"
+              ><i class="fa-regular fa-pen-to-square" style="color: #ffffff"></i
+            ></a>
+          </td>
+          <td data-label="Action">
+            <a class="bgRed" href="/jv/<%= jv._id %>/delete"
+              ><i class="fa-solid fa-trash-can" style="color: #ffffff"></i
+            ></a>
+          </td>
+        </tr>
+        <% }) %>
+      </table>
+      <% } %>
+    </main>
+    <footer> <%- include('../../components/footer.ejs') %> </footer>
+  </body>
+  <script src="scripts/header.js"></script>
+  <script src="/scripts/burger.js"></script>
+  <script
+    src="https://kit.fontawesome.com/a00d3e0d3e.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

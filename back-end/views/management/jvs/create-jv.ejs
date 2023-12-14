@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/backOffice.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Crée une fiche d'un jeux videos</title>
+</head>
+<body>
+    <header>
+        <%- include('../../components/header.ejs') %>
+    </header>
+    <main class="updateUser">
+       <h2>Création d'un Jeu video </h2>
+       <form action="/jv/create/add" method="POST" class="connect">
+            <div>
+                <label for="titre">Titre du jeu </label>
+                <input type="text" id="titre" name="titre">
+            </div>
+            <div>
+                <label for="url">Url du jeu</label>
+                <input type="text" id="url" name="url">
+            </div>
+            <button>Créer</button>
+            <a href="/jv">Revenir a la liste des jeux</a>
+       </form>
+        <% if (successCreateJv) { %>
+            <div role="alert">
+                <p><%= successCreateJv %></p>
+            </div>
+        <% } else { %>
+            <div role="alert">
+                <p><%= JvExiste %> </p>
+            </div>
+        <% } %>
+        
+    </main>
+    <footer><%- include('../../components/footer.ejs') %> </footer>
+</body>
+<script src="scripts/header.js"></script>
+<script src="/scripts/burger.js"></script>
+<script
+  src="https://kit.fontawesome.com/a00d3e0d3e.js"
+  crossorigin="anonymous"
+></script>
+</html>
