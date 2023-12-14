@@ -15,24 +15,24 @@
 
          <h1>Ajouter un historique</h1>
      
-               <form class="connect" action="/streamers/create/add" method="post" enctype="multipart/form-data">
+               <form class="connect" action="/historics/create/add" method="POST">
 
                   <div>
-                     <input type="date" id="date" required>
+                     <input type="date" id="date" name="date" required>
                      <label for="date">
                         Dates
                      </label>
                   </div>
 
                   <div>
-                     <input type="number" id="amount" minlength="1" required>
+                     <input type="number" id="amount" name="amount" minlength="1" required>
                      <label for="amount">
                         Montant
                      </label>
                   </div>
 
                   <div>
-                     <input type="text" id="associations" minlength="1" required>
+                     <input type="text" id="associations"  name="associations" minlength="1" required>
                      <label for="associations">
                         Associations
                      </label>
@@ -42,7 +42,7 @@
                      Ajouter
                   </button>
 
-                  <a href="/historics.ejs">Revenir à la liste des historiques</a>
+                  <a href="/historics">Revenir à la liste des historiques</a>
                   
                   
                </form>

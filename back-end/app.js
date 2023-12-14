@@ -11,6 +11,8 @@ const app = express(); // J'initialise le serveur de mon application avec la fon
 dotenv.config(); // J'utilise la méthode config de dotenv pour connecter mon fichier .env et accéder à ses variables
 
 // J'importe toutes les routes de mon projet
+const historicsRoutes = require("./routes/historics");
+const streamersRoutes = require("./routes/streamers");
 const homeRoutes = require("./routes/home");
 const usersRoutes = require("./routes/user");
 const adminRoutes = require("./routes/admin");
@@ -60,6 +62,8 @@ app.use((req, res, next) => {
 app.use(morgan("dev"));
 
 // Mes différentes routes sont des middlewares, j'utilise donc ici la méthode use comme pour un middleware personnalisé/externe
+app.use(historicsRoutes);
+app.use(streamersRoutes);
 app.use(homeRoutes);
 app.use(signRoutes);
 app.use(adminRoutes);
