@@ -2,15 +2,15 @@ const path= require('path');
 const Historics = require('../models/Historics');
 const verifInputsHistoric = require('../middlewares/verifInputsHistoric');
 
-const findHistoricById = async (id) => {
-    return await Historics.findOne({_id: id});
+const findHistoricById = async (req, res) => {
+    return await Historics.findOne({_id: req.params.id});
 }
 
 const findHistoricByDate = async (req) => {
     return await Historics.findOne({date: req.body.date});
 }
 
-// Création d'un nouvel histoique
+// Création d'un nouvel historique
 const newHistoric = async (req, res) => {
     const historic = new Historics({
         date: req.body.date,
@@ -43,7 +43,7 @@ const refreshHistorics = async (req,res) => {
     await Historics.updateOne({_id: req.params.id}, {...updatedHistorics})
     .then((result) => {
         req.session.successUpdatedHistorics=`Historique du ${updatedHistorics.date} mis à jour avec succès.`;
-        res.redirect(`/historics/${req.params.id}/update`);
+        // res.redirect(`/historics/${req.params.id}/update`);
     }).catch ((error) => {
         console.log(error.message)
         res.status(500).json({message: 'Erreur lors de la mise à jour de votre historique : ' + error})

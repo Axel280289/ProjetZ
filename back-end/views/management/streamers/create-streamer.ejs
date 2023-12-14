@@ -1,13 +1,20 @@
-<link rel="stylesheet" href=".././public/styles/streamers.css">
-<link rel="stylesheet" href=".././public/styles/index.css">
+<link rel="stylesheet" href="/styles/style.css">
+<link rel="stylesheet" href="/styles/historics.css">
+<link rel="stylesheet" href="/styles/header.css">
+<link rel="stylesheet" href="/styles/backOffice.css">
 
 <body>
-    
-    <main>
+   <%- include('../../components/header.ejs') %> <% if (successCreateStreamer) { %>
+      <div role="alert"><%= successCreateStreamer %></div>
+      <% } %> 
+      
+   <main class="updateUser">
 
-        <h1>Ajouter un streamer</h1>
-        
-        <form action="/streamers/create/add" method="POST">
+      <section class="historics-container">
+
+         <h1>Ajouter un streamer</h1>
+     
+         <form action="/streamers/create/add" method="POST">
 
             <div>
                 <input type="text" id="name" name="name" required>
@@ -31,10 +38,18 @@
                 <a href="/streamers">Revenir à la liste des streamers</a>
             </div>
         </form>
+               
+      </section>
+   </main>
 
-    </main>
-
+   <footer>
     <%- include('../../components/footer.ejs') %>
+   </footer>
     <script src="/scripts/burger.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a00d3e0d3e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/scripts/header.js"></script>
 </body>
 </html>

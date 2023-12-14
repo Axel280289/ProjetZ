@@ -10,14 +10,6 @@ const { getStreamers, getStreamer, getStreamerById, addStreamer, createStreamer,
 router.get('/streamers', authMiddleware, verifUser, addStreamer);
 
 router.get('/streamers/create', authMiddleware, verifUser, addStreamer);
-    
-router.get('/streamers/update', (req, res) => {
-    res.status(200).render(`${__dirname}/views/management/streamer/update-streamer.html`);
-});
-    
-router.get('/streamers/delete', (req, res) => {
-    res.status(200).render(`${__dirname}/views/management/streamer/delete-streamer.html`);
-});
 
 // liste des streamers (et détails)
 router.get('/streamers', authMiddleware, verifUser, getStreamers);

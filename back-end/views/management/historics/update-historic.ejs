@@ -18,59 +18,43 @@
     <%- include('../../components/header.ejs') %>
     <main class="updateUser">
       <h2>
-        Mise à jour de l'utilisateur du <%= `${detailsHistoric.date}
-        ${detailsHistoric.date}` %>
+        Mise à jour de l'historique du <%= `${detailsHistoric.date}` %>
       </h2>
 
       <% if(successUpdateHistoric) %>
       <p><%= successUpdateHistoric %></p>
 
-      <form
-        class="connect"
-        action="/historics/<%= detailsHistoric._id %>/update?_method=PUT"
-        method="POST"
-      >
+      <form class="connect" action="/historics/<%= detailsHistoric._id %>/update?_method=PUT" method="POST">
+    
+
         <div>
-          <input
-            type="text"
-            id="lastname"
-            name="lastname"
-            value="<%= detailsUser ? detailsUser.lastname : '' %>"
-          />
-          <label for="lastname">Nom</label>
-        </div>
-        <div>
-          <input
-            type="text"
-            id="firstname"
-            name="firstname"
-            value="<%= detailsUser ? detailsUser.firstname : '' %>"
-          />
-          <label for="firstname">Prénom</label>
-        </div>
-        <div>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value="<%= detailsUser ? detailsUser.email : '' %>"
-          />
-          <label for="email">Email</label>
+           <input type="date" id="date" name="date" required value="<%= detailsHistoric . detailsHistoric.twitch : '' %>">
+           <label for="date">
+              Dates
+           </label>
         </div>
 
-        <% if (fullAccess === "adminPrincipal") { %>
         <div>
-          <input type="password" id="password" name="password" />
-          <label for="password">Mot de passe</label>
+           <input type="number" id="amount" name="amount" minlength="1" required value="<%= detailsHistoric . detailsHistoric.twitch : '' %>">
+           <label for="amount">
+              Montant
+           </label>
         </div>
-        <!--  // Code à exécuter si l'utilisateur a un accès complet et est un administrateur principal -->
-        <% } else { %>
-        <!-- Code à exécuter si l'utilisateur n'a pas un accès complet ou n'est pas un administrateur principal -->
-        <% } %>
 
-        <button>Mettre a jours</button>
-        <a href="/users">Revenir a la liste des utilisateur</a>
-      </form>
+        <div>
+           <input type="text" id="associations"  name="associations" minlength="1" required value="<%= detailsHistoric . detailsHistoric.twitch : '' %>">
+           <label for="associations">
+              Associations
+           </label>
+        </div>
+
+        <button class="create-historic-submit">
+           Ajouter
+        </button>
+
+        <a href="/historics">Revenir à la liste des historiques</a>
+             
+</form>
       <%- include('../../components/logout.ejs') %>
     </main>
     <%- include('../../components/footer.ejs') %>
