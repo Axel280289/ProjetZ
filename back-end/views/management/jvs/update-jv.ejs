@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href=/styles/backOffice.css />
+    <link rel="stylesheet" href="/styles/style.css" />
+
+    <title>Mise a jour du jeu</title>
+  </head>
+  <body>
+    <%- include('../../components/header.ejs') %>
+    <main class="updateUser">
+      <h2>
+        Mise à jour du jeu <%= `${detailsJv.titre}` %>
+      </h2>
+
+      <% if(successUpdateJv) %>
+      <p><%= successUpdateJv %></p>
+
+      <form
+      class="connect"
+      action="/jv/<%= detailsJv._id %>/update?_method=PUT"
+      method="POST"
+    >
+        <div>
+            <label for="titre">Titre du jeu </label>
+            <input type="text" id="titre" name="titre">
+        </div>
+        <div>
+            <label for="url">Url du jeu</label>
+            <input type="text" id="url" name="url">
+        </div>
+        <button>Mettre a jours</button>
+        <a href="/jv">Revenir a la liste des jeux</a>
+      </form>
+    </main>
+    <%- include('../../components/footer.ejs') %>
+    <script src="/scripts/burger.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a00d3e0d3e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/scripts/header.js"></script>
+  </body>
+</html>
+
+</html>

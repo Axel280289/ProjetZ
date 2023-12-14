@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/backOffice.css/">
+    <title>Détails du jeu</title>
+  </head>
+  <body>
+    <%- include('../../components/header.ejs') %> <% if (detailsJv) { %>
+    <h2>Détails du jeu <%= detailsJv.titre %> </h2>
+    <ul>
+      <li>Titre : <%= detailsJv.titre%></li>
+      <li>url : <%= detailsJv.url %></li>
+    </ul>
+    <% } %>
+    <script src="/scripts/burger.js"></script>
+  </body>
+</html>
