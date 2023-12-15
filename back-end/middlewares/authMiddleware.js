@@ -12,6 +12,7 @@ exports.authMiddleware = async (req, res, next) => {
 
     const decodedToken = jwt.verify(token, process.env.SECRET_KEY_TOKEN);
 
+
     //Décrypte le token en utilisant la clé secrète (process.env.SECRET_KEY_TOKEN) et récupère les informations encodées dans le token.
 
     const user = await User.findById(decodedToken.userId);
