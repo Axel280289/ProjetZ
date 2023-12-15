@@ -11,30 +11,47 @@
     />
     <link rel="stylesheet" href="/styles/style.css" />
     <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/index.css">
     <title>Document</title>
   </head>
   <body>
     <header id="header"></header>
     <section class="index-banner">
-      <img src="/images/zevent-banner.webp" alt="Bannière du ZEvent" />
+      <img src="/images/zevent-banner.webp" alt="Bannière du ZEvent"/>
 
-      <p>
-        <strong>ZEvent</strong> est un projet caritatif créé par
-        <strong>Adrien Nougaret</strong> et <strong>Alexandre Dachary</strong>.
-      </p>
+      <article class="index-description">
+        <p>
+          <strong>ZEvent</strong> est un projet caritatif créé par
+          <strong>Adrien Nougaret</strong> et <strong>Alexandre Dachary</strong>.
+        </p>
+        <br>
+        <p>
+          Divisé en deux parties, l'évènement se compose d'un showcase qui fait
+          office d'amorce et est suivi par un marathon de streaming jeux vidéo
+          lors duquel de nombreux animateurs spécialisés se rassemblent tout au
+          long du weekend.
+        </p>
+        <br>
+        <p>
+          Pendant <strong>plus de 50h</strong>, les participants diffusent du
+          contenu en direct tous ensemble et encouragent les téléspectateurs à se
+          mobiliser pour soutenir une <strong>association caritative</strong>.
+        </p>
+      </article>
+    </section>
 
-      <p>
-        Divisé en deux parties, l'évènement se compose d'un showcase qui fait
-        office d'amorce et est suivi par un marathon de streaming jeux vidéo
-        lors duquel de nombreux animateurs spécialisés se rassemblent tout au
-        long du weekend.
-      </p>
+    <section id="historic-container">
+      <h2>Historique des éditions</h2>
+      <div id="historic-list">
 
-      <p>
-        Pendant <strong>plus de 50h</strong>, les participants diffusent du
-        contenu en direct tous ensemble et encouragent les téléspectateurs à se
-        mobiliser pour soutenir une <strong>association caritative</strong>.
-      </p>
+      </div>
+    </section>
+
+    <section id="streamer-container">
+      <h2>Les streamers</h2>
+      <div id="streamer-list">
+
+      </div>
     </section>
 
     <script
@@ -42,5 +59,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="/script/header.js"></script>
+    <script src="/script/index.js"></script>
   </body>
 </html>
