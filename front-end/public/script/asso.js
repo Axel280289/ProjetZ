@@ -29,3 +29,26 @@ function openTab(tabId) {
 
 // Appel de la fonction pour ouvrir l'onglet par défaut au chargement de la page
 openDefaultTab();
+
+// //fecth // frontend.js
+// document.addEventListener("DOMContentLoaded", function () {
+//   const apiUrl = "http://localhost:3001/usersList";
+
+//   fetch(apiUrl)
+//     .then((response) => response.json())
+//     .then((users) => {
+//       const userListElement = document.getElementById("userList");
+
+//       users.forEach((user) => {
+//         const listItem = document.createElement("li");
+//         listItem.textContent = `${user.firstname} ${user.lastname} - ${user.email}`;
+//         userListElement.appendChild(listItem);
+//       });
+//     })
+//     .catch((error) =>
+//       console.error(
+//         "Erreur lors de la récupération de la liste des utilisateurs :",
+//         error
+//       )
+//     );
+// });
