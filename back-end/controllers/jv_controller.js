@@ -12,13 +12,14 @@ const findJvById = async (id) => {
 const newJv = async (req, res) => {
     const jv = new JvModels({
         titre: req.body.titre,
+        image: req.body.image,
         url: req.body.url,
     });
 
 // Sauvegarde des données du nouveau jeux videos
 
     jv.save().then(result => {
-        req.session.successCreateJv = `Le jeu : ${result.titre} à étais ajouter avec succés.`
+        req.session.successCreateJv = `Le jeu : ${result.titre} a été ajouté avec succés.`
 
 // o On redirige vers la page de création d'un nouveau jeu 
         res.status(200).redirect('/jv/create');

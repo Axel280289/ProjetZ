@@ -6,7 +6,7 @@ exports.authMiddleware = async (req, res, next) => {
         const token = req.cookies.token;
 
         if(!token) {
-            return res.status(402).json({ message: 'Non autorisé' });
+            return res.status(402).jsonx({ message: 'Non autorisé' });
         }
 
         const decodedToken = jwt.verify(token, process.env.SECRET_KEY_TOKEN);

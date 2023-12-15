@@ -4,10 +4,10 @@ document.getElementById("header").innerHTML = `
                 <img class="logo" src="/images/zevent-logo.webp" alt="Logo du Zevent">
                 <div id="menu-icone">
                     <div id="logo-menu">
-                        <a href=""><i class="fa-solid fa-house fa-2xl" style="color: #ffffff;"></i></a>
-                        <a href=""><i class="fa-solid fa-building fa-2xl" style="color: #ffffff;"></i></a>
-                        <a href=""><i class="fa-brands fa-square-youtube fa-2xl" style="color: #ffffff;"></i></a>
-                        <a href=""><i class="fa-solid fa-hard-drive fa-2xl"></i></a>
+                        <a href="/"><i class="fa-solid fa-house fa-2xl" style="color: #ffffff;"></i></a>
+                        <a href="/associations"><i class="fa-solid fa-building fa-2xl" style="color: #ffffff;"></i></a>
+                        <a href="/clips"><i class="fa-brands fa-square-youtube fa-2xl" style="color: #ffffff;"></i></a>
+                        <a href="/stats"><i class="fa-solid fa-hard-drive fa-2xl"></i></a>
                     </div>
                 </div>
                 <ul id="menu-principal">

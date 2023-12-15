@@ -1,25 +1,26 @@
 const express = require("express");
+const {authMiddleware} = require("../middlewares/authMiddleware");
 const { getJv, addJv, getJvs, getJvById, modifyJv, createJv, removeJv, deleteJv, updateJv} = require("../controllers/jv_controller");
 const router = express.Router();
 
 // Créer un jeu 
-router.get('/jv/create', addJv);
-router.post('/jv/create/add', createJv);
+router.get('/jv/create', authMiddleware, addJv);
+router.post('/jv/create/add',authMiddleware, createJv);
 
 // Liste des Jv
 
-router.get('/jv', getJvs);
+router.get('/jv', authMiddleware, getJvs);
 
 // Infomration d'un jeu spécifique 
-router.get('/jv/:id', getJvById, getJv);
+router.get('/jv/:id',authMiddleware, getJvById, getJv);
 
 //Mise a jour d'un jeu 
 
-router.get('/jv/:id/update', getJvById, modifyJv);
-router.put('/jv/:id/update', updateJv);
+router.get('/jv/:id/update',authMiddleware, getJvById, modifyJv);
+router.put('/jv/:id/update',authMiddleware, updateJv);
 
 //Suppression d'un jeu
-router.get('/jv/:id/delete', getJvById, removeJv);
-router.delete('/jv/:id/delete', deleteJv);
+router.get('/jv/:id/delete',authMiddleware, getJvById, removeJv);
+router.delete('/jv/:id/delete',authMiddleware, deleteJv);
 
 module.exports = router

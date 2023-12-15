@@ -12,4 +12,9 @@
 }
 
 body {
-background-color: var(--primary-color);}
+background-color: var(--primary-color);
+font-family: var(--main-font);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--title-font);}

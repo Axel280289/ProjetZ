@@ -12,6 +12,7 @@ header {
   top: 0;
   height: 70px;
   width: 100%;
+  z-index: 1;
 }
 /* Mise en forme des liens menu  */
 
