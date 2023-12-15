@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/backOffice.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('../../components/header.ejs') %>
+    <div class="listMenu">
+        <a href="/admin">Dashboard</a>
+        <a href="/historics/create">Ajouter un historique</a>
+      </div>
+      <main class="listUser">
+        <h2>Liste des historiques</h2>
+        <% if(successDeleteHistoric) { %>
+            <p><%= successDeleteHistoric %></p>
+            <% } %> <% if(historic) { %>
+                <table><% historic.forEach(historic => { %>
+        <tr>
+          <td data-label="Nom">
+            <a href="/historics/<%= historic._id %>">
+              <%= historic.date %>
+            </a>
+          </td>
+          <td data-label="amount"><%= historic.amount %></td>
+          <td data-label="associations"><%= historic.associations %></td>
+          <td data-label="Action">
+            <a class="bgGreen" href="/historics/<%= historic._id %>/update"
+              ><i class="fa-regular fa-pen-to-square" style="color: #ffffff"></i
+            ></a>
+          </td>
+          <td data-label="Action">
+            <a class="bgRed" href="/historics/<%= historic._id %>/delete"
+              ><i class="fa-solid fa-trash-can" style="color: #ffffff"></i
+            ></a>
+          </td>
+        </tr>
+        <% }) %>
+      </table>
+      <% } %>
+
+      <%- include('../../components/logout.ejs') %>
+
+      <!-- test -->
+    </main>
+    <script src="/scripts/burger.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a00d3e0d3e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/scripts/header.js"></script>
+  </body>
+</html>
+

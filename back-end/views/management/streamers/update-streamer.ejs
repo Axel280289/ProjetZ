@@ -1,0 +1,59 @@
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com%22%3E/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href=/styles/backOffice.css />
+    <link rel="stylesheet" href="/styles/style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('../../components/header.ejs') %>
+    <main class="updateUser">
+      <h2>
+        Mise à jour du streamer <%= `${detailsStreamer.name}` %>
+      </h2>
+
+      <% if(successUpdateStreamer) %>
+      <p><%= successUpdateStreamer %></p>
+
+      <form class="connect" action="/streamers/<%= detailsStreamer._id %>/update?_method=PUT" method="POST">
+
+        <div>
+            <input type="text" id="name" name="name" required value="<%= detailsStreamer ? detailsStreamer.name : '' %>">
+            <label for="name">
+                Nom streamer
+            </label>
+        </div>
+    
+        <div>
+            <input type="url" id="twitch" name="twitch" minlength="1" required value="<%= detailsStreamer . detailsStreamer.twitch : '' %>">
+            <label for="twitch">
+                Chaîne twitch
+            </label>
+        </div>
+    
+        <button class="streamer-form-button">
+            Ajouter
+        </button>
+    
+        <a href="/streamers">Revenir à la liste des streamers</a>
+        
+    </form>
+      <%- include('../../components/logout.ejs') %>
+    </main>
+    <%- include('../../components/footer.ejs') %>
+    <script src="/scripts/burger.js"></script>
+    <script
+      src="https://kit.fontawesome.com/a00d3e0d3e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/scripts/header.js"></script>
+  </body>
+</html>

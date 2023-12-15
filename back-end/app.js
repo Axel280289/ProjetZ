@@ -12,10 +12,13 @@ const app = express(); // J'initialise le serveur de mon application avec la fon
 dotenv.config(); // J'utilise la méthode config de dotenv pour connecter mon fichier .env et accéder à ses variables
 
 // J'importe toutes les routes de mon projet
+const historicsRoutes = require("./routes/historics");
+const streamersRoutes = require("./routes/streamers");
 const homeRoutes = require("./routes/home");
 const usersRoutes = require("./routes/user");
 const adminRoutes = require("./routes/admin");
 const signRoutes = require("./routes/sign");
+const jvRoutes = require("./routes/jv");
 const errorRoutes = require("./routes/error");
 
 // J'utilise la méthode urlencoded pour récupérer les informations d'un formulaire et les stocker dans req.body
@@ -62,17 +65,19 @@ app.use((req, res, next) => {
 app.use(morgan("dev"));
 
 // Mes différentes routes sont des middlewares, j'utilise donc ici la méthode use comme pour un middleware personnalisé/externe
+app.use(historicsRoutes);
+app.use(streamersRoutes);
 app.use(homeRoutes);
 app.use(signRoutes);
 app.use(adminRoutes);
 app.use(usersRoutes);
+app.use(jvRoutes);
 app.use(errorRoutes);
 
 // J'écoute les informations émis par mon application (app) avec la méthode listen, sans cette méthode le serveur ne peut fonctionner
 app.listen(process.env.PORT || 3000, () => {
   console.log(
-    `Le site est disponible à l'adresse http://${
-      process.env.HOST ? process.env.HOST : "localhost"
+    `Le site est disponible à l'adresse http://${process.env.HOST ? process.env.HOST : "localhost"
     }:${process.env.PORT ? process.env.PORT : 3000}`
   );
 });
