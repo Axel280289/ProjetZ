@@ -1,0 +1,41 @@
+.historics-container {
+    min-width: 280px;
+    margin-bottom: 80px;
+}
+
+form label {
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.historics-container h1 {
+    font-family: var(--title-font);
+    font-style: italic;
+    font-weight: 500;
+    margin-top: 15vh;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.connect input,
+.connect button,
+.connect a {
+    border-color: var(--tertiaire-color);
+    font-size: 16px;
+}
+
+@media (min-width: 700px) {
+    .connect input,
+    .connect button,
+    .connect a {
+        width: 750px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .connect input,
+    .connect button,
+    .connect a {
+      width: 450px;
+    }
+}

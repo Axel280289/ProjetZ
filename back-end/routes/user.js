@@ -13,6 +13,7 @@ const {
   modifyUser,
   removeUser,
   deleteUser,
+  // getListUsers,
 } = require("../controllers/users_controller");
 const { authMiddleware } = require("../middlewares/authMiddleware");
 const { verifUser } = require("../middlewares/verifUser");
@@ -23,6 +24,9 @@ router.post("/users/create/add", authMiddleware, verifUser, createUser);
 
 // Liste des utilisateur (get => afficher la page)
 router.get("/users", authMiddleware, verifUser, getUsers);
+
+// Route pour récupérer via un fetch
+// router.get("/usersList", getListUsers);
 
 // Informations d'un utilisateur spécifique (get => afficher la page)
 router.get("/users/:id", authMiddleware, verifUser, getUserById, getUser);
