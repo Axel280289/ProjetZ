@@ -183,7 +183,18 @@ exports.updateJv = async (req, res) => {
         res.status(500).send('Erreur de mise à jour du jeu');
     }
 };
-        
+       
+// pour le fecth 
+exports.getListJv = async (req, res) => {
+  try {
+    const jvs = await JvModels.find();
+    res.status(200).json(jvs);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("Server Error");
+  }
+};
+
 
 
 
