@@ -88,6 +88,7 @@ function populateTableList(){
         listOfProducts += `
           <tr>
             <td><img src='${prod.pic}' class="imgfluid w50></td>
+            <td class="w-25 align-middle">${prod.pic}</td>
             <td class="w-25 align-middle">${prod.name}</td>
             <td class="w-25 align-middle">${prod.price}€</td>
             <td class="w-25 align-middle">${prod.category}</td>
