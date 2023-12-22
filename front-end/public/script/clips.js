@@ -41,23 +41,26 @@ function tabsAnimation(e) {
     window.scroll(0, 0);
 }
 
-// //fecth // frontend.js
-// document.addEventListener("DOMContentLoaded", function () {
-//   const apiUrl = "http://localhost:3001/jv/list";
+//fecth // frontend.js
+document.addEventListener("DOMContentLoaded", function () {
+  const apiUrl = "http://localhost:3001/jv/list";
 
-//   fetch(apiUrl)
-//     .then((response) => response.json())
-//     .then((jvs) => {
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((jvs) => {
+        const jvTitre = document.getElementById("jeux");
+        //jvTitre.innerHTML = "";
 
-//       jvs.forEach((jv) => {
-//         const jvTitre = document.getElementById("titreJv");
-//         jvTitre.textContent = `${jv.titre}`;
-//       });
-//     })
-//     .catch((error) =>
-//       console.error(
-//         "Erreur lors de la récupération de la liste des jeux videos:",
-//         error
-//       )
-//     );
-// });
+      jvs.forEach((jv) => {
+        jvTitre.innerHTML += `<article id="jeux videos">
+         <a href="${jv.url}"> <img src="/images/${jv.titre.toLowerCase().split(' ').join('-')}.webp"></a>
+         <h3 id="titreJeux"> ${jv.titre} </h3></article>`
+      });
+    })
+    .catch((error) =>
+      console.error(
+        "Erreur lors de la récupération de la liste des jeux videos:",
+        error
+      )
+    );
+});
