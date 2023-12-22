@@ -8,11 +8,23 @@ body {
   color: white;
 }
 
+#titreJeux {
+  color: var(--secondary-color);
+}
+
 .container{
   background-color: var(--primary-color);
 }
 
 .clip {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+#jeux {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
