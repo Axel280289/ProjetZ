@@ -87,6 +87,7 @@ a:visited {
 
 .ongletAsso a:hover {
   background: var(--secondary-color);
+  color: var(--tertiaire-color);
 }
 
 .chiffres {

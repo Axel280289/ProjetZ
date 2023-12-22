@@ -7,7 +7,8 @@ const session = require("express-session"); // permet de créer une session util
 const methodOverride = require("method-override"); // Permet d'ajouter un paramètre à l'url d'action d'un formulaire pour exécuter les requêtes PUT et DELETE
 const cookieParser = require("cookie-parser"); // Permet de récupérer les données des cookie de l'objet request
 const app = express(); // J'initialise le serveur de mon application avec la fonction express.
-// const cors = require("cors");
+const cors = require("cors");
+const multer = require("multer");
 
 dotenv.config(); // J'utilise la méthode config de dotenv pour connecter mon fichier .env et accéder à ses variables
 
@@ -29,8 +30,8 @@ app.use(express.json());
 // On indique à method-override le nom du paramètre qui indique les types de requêtes PUT et DELETE
 app.use(methodOverride("_method"));
 app.use(cookieParser());
-// app.use(cors());
-
+app.use(cors());
+app.use(multer().any()); // .any permet de prendre tout type de fichier
 // Je me connecte à la base de donnée
 mongoose
   .connect(process.env.URL_DATABASE)
