@@ -7,7 +7,7 @@ function Products(pic,name,price,category,size,description){
     this.description = description
 }
 
-const product1 = new Products('public/images/other img/zevent-logo.webp', 'Tee-shirt Bio - officiel Zevent 2022', 26, 'tshirt', ["xs", "s", "m", "l", "xl","xxl","xxxl"], 
+const product1 = new Products('public/images/other/tshirt.webp', 'Tee-shirt Bio - officiel Zevent 2022', 26, 'tshirt', ["xs", "s", "m", "l", "xl","xxl","xxxl"], 
 [
     {
         "icon": "leaf.svg",
@@ -31,7 +31,7 @@ const product1 = new Products('public/images/other img/zevent-logo.webp', 'Tee-s
     }
 ]);
 
-const product2 = new Products('../public/images/other/zplace.webp', 'ZEvent Place - Tirage sur Dibond', 60, 'zplace', '/', 
+const product2 = new Products('public/images/other/zplace.webp', 'ZEvent Place - Tirage sur Dibond', 60, 'zplace', 'rien', 
 [
     {
         "icon": "size.svg",
@@ -55,7 +55,7 @@ const product2 = new Products('../public/images/other/zplace.webp', 'ZEvent Plac
     }
 ] );
 
-const product3 = new Products('../public/images/other/plaque.webp', 'Trophée numéroté ZEvent 2022', 175, 'trophee', '/', [
+const product3 = new Products('public/images/other/plaque.webp', 'Trophée numéroté ZEvent 2022', 175, 'trophee', 'rien', [
     {
         "icon": "delivery.svg",
         "summary": "Délais de livraison",
@@ -87,13 +87,15 @@ function populateTableList(){
     products.forEach(prod=>
         listOfProducts += `
           <tr>
-            <td><img src=${prod.pic} class="imgfluid w50></td>
+            <td><img src='${prod.pic}' class="imgfluid w50></td>
             <td class="w-25 align-middle">${prod.name}</td>
             <td class="w-25 align-middle">${prod.price}€</td>
+            <td class="w-25 align-middle">${prod.category}</td>
+            <td class="w-25 align-middle">${prod.size}</td>
+            <td class="w-25 align-middle">${prod.description}</td>
           </tr>
           `   
       )
 
     document.getElementById('productList').innerHTML = listOfProducts;
 }
-
