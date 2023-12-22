@@ -12,13 +12,14 @@ const findJvById = async (id) => {
 const newJv = async (req, res) => {
     const jv = new JvModels({
         titre: req.body.titre,
+        image: req.body.image,
         url: req.body.url,
     });
 
 // Sauvegarde des données du nouveau jeux videos
 
     jv.save().then(result => {
-        req.session.successCreateJv = `Le jeu : ${result.titre} à étais ajouter avec succés.`
+        req.session.successCreateJv = `Le jeu : ${result.titre} a été ajouté avec succés.`
 
 // o On redirige vers la page de création d'un nouveau jeu 
         res.status(200).redirect('/jv/create');
@@ -182,7 +183,18 @@ exports.updateJv = async (req, res) => {
         res.status(500).send('Erreur de mise à jour du jeu');
     }
 };
-        
+       
+// pour le fecth 
+exports.getListJv = async (req, res) => {
+  try {
+    const jvs = await JvModels.find();
+    res.status(200).json(jvs);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("Server Error");
+  }
+};
+
 
 
 

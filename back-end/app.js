@@ -7,6 +7,7 @@ const session = require("express-session"); // permet de créer une session util
 const methodOverride = require("method-override"); // Permet d'ajouter un paramètre à l'url d'action d'un formulaire pour exécuter les requêtes PUT et DELETE
 const cookieParser = require("cookie-parser"); // Permet de récupérer les données des cookie de l'objet request
 const app = express(); // J'initialise le serveur de mon application avec la fonction express.
+const cors = require("cors");
 
 dotenv.config(); // J'utilise la méthode config de dotenv pour connecter mon fichier .env et accéder à ses variables
 
@@ -31,6 +32,7 @@ app.use(express.json());
 // On indique à method-override le nom du paramètre qui indique les types de requêtes PUT et DELETE
 app.use(methodOverride("_method"));
 app.use(cookieParser());
+app.use(cors());
 
 // Je me connecte à la base de donnée
 mongoose
@@ -50,7 +52,7 @@ app.use(
 // Je configure l'accès aux données dites "publique" de mon serveur grâce à la méthode static d'express
 app.use("/images", express.static(`${__dirname}/public/images/`)); // les liens des images commenceront maintenant par "/images/" => "/images/monImage.jpg"
 app.use("/styles", express.static(`${__dirname}/public/styles/`)); // les liens vers mes feuilles de style commenceront maintenant par "/styles" => "/styles/monStyle.css"
-app.use("/script", express.static(`${__dirname}/public/script`));
+app.use("/scripts", express.static(`${__dirname}/public/scripts`));
 
 // Avant qu'une requête soit envoyer je veux configurer quelques middlewares qui afficheront des informations utiles comme la date/heure de la requête, ou encore le status/type de la requête
 // Avec ce middleware, je veux afficher la date de la requête

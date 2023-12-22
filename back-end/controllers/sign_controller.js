@@ -73,14 +73,14 @@ exports.createUser = async (req, res) => {
     if (req.body.password === req.body.confirm) {
       // On sécurise les données envoyées
       verifInputs(req, res);
-
       // On commence par vérifier si l'utilisateur existe en fonction de son email
       await findUserByMail(req)
         .then((user) => {
-          signUser(req, res);
           // Si l'utilisateur existe on envois un message
           if (user) {
             res.status(400).send("User Already Exist");
+          } else {
+            signUser(req, res);
           }
         })
         .catch((error) =>

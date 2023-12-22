@@ -7,6 +7,7 @@ const mongoose = require("mongoose"); // ici mongoose va servir à se connecter 
 const session = require("express-session"); // permet de créer une session utilisateur pour pouvoir stocker des informations d'une requête http à une autre
 const methodOverride = require("method-override"); // Permet d'ajouter un paramètre à l'url d'action d'un formulaire pour exécuter les requêtes PUT et DELETE
 const cookieParser = require("cookie-parser"); // Permet de récupérer les données des cookie de l'objet request
+const cors = require("cors");
 const app = express(); // J'initialise le serveur de mon application avec la fonction express.
 const cors = require('cors');
 const multer = require('multer');
@@ -29,6 +30,7 @@ app.use(express.json());
 // On indique à method-override le nom du paramètre qui indique les types de requêtes PUT et DELETE
 app.use(methodOverride("_method"));
 app.use(cookieParser());
+app.use(cors());
 
 app.use(multer().any());
 
