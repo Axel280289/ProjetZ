@@ -1,4 +1,5 @@
 // J'importe les différents modules dont j'ai besoin pour mon serveur
+
 const express = require("express"); // express pour faciliter la création du serveur
 const dotenv = require("dotenv"); // dotenv pour accéder aux variables d'environnement du fichier .env
 const morgan = require("morgan"); // morgan pour afficher des informations au moment des requêtes
@@ -8,7 +9,8 @@ const methodOverride = require("method-override"); // Permet d'ajouter un param�
 const cookieParser = require("cookie-parser"); // Permet de récupérer les données des cookie de l'objet request
 const cors = require("cors");
 const app = express(); // J'initialise le serveur de mon application avec la fonction express.
-
+const cors = require('cors');
+const multer = require('multer');
 dotenv.config(); // J'utilise la méthode config de dotenv pour connecter mon fichier .env et accéder à ses variables
 
 // J'importe toutes les routes de mon projet
@@ -16,6 +18,7 @@ const associationsRoutes = require("./routes/associations");
 const clipsRoutes = require("./routes/clips");
 const statsRoutes = require("./routes/stats");
 
+app.use(cors());
 // J'utilise la méthode urlencoded pour récupérer les informations d'un formulaire et les stocker dans req.body
 app.use(express.urlencoded({ extended: true }));
 /* <input name="lastname" value="Doe"> => { "lastname": "Doe"} (objet json) */
@@ -28,6 +31,9 @@ app.use(express.json());
 app.use(methodOverride("_method"));
 app.use(cookieParser());
 app.use(cors());
+
+app.use(multer().any());
+
 
 app.use(
   session({
