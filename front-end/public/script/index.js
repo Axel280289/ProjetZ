@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+
+
 // Définition de l'url à suivre pour récupérer les données
 
 // Définition du script pour afficher les données.
@@ -44,8 +46,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
             streamers.forEach((streamer) => {
                 htmlContent += `<ul class="streamer-item">
-                    <li>${streamer.name}</li>
-                    <li>${streamer.twitch}</li>
+                    <a href="${streamer.twitch}">
+                        <img src="/images/${streamer.name}.webp">
+                        <li>${streamer.name}</li>
+                    </a>
                     </ul>
                 `;
             });

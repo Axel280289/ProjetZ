@@ -9,6 +9,7 @@ const methodOverride = require("method-override"); // Permet d'ajouter un param�
 const cookieParser = require("cookie-parser"); // Permet de récupérer les données des cookie de l'objet request
 const app = express(); // J'initialise le serveur de mon application avec la fonction express.
 const cors = require('cors');
+const multer = require('multer');
 dotenv.config(); // J'utilise la méthode config de dotenv pour connecter mon fichier .env et accéder à ses variables
 
 // J'importe toutes les routes de mon projet
@@ -28,6 +29,8 @@ app.use(express.json());
 // On indique à method-override le nom du paramètre qui indique les types de requêtes PUT et DELETE
 app.use(methodOverride("_method"));
 app.use(cookieParser());
+
+app.use(multer().any());
 
 
 app.use(

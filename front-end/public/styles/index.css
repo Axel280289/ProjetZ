@@ -22,18 +22,9 @@ strong {color: var(--secondary-color);}
     font-size: 24px;
 }
 
-#historic-container h2 {
-    font-family: var(--title-font);
-    color: var(--tertiaire-color);
-    text-align: center;
-    font-size: 3.1em;
-}
-
 #historic-container {
-    padding-block: 40px;
     width: 100vw;
     height: fit-content;
-    padding-top: 50px;
     padding-inline: 20px;
 }
 
@@ -48,13 +39,14 @@ strong {color: var(--secondary-color);}
 .historic-item {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     border: 1px solid gray;
     border-radius: 20px;
     background-color: var(--dark-color);
     padding-inline: 15px;
     padding-block: 15px;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-inline: auto;
 }
 
 .historic-item li:first-of-type {
@@ -66,6 +58,89 @@ strong {color: var(--secondary-color);}
     text-shadow: rgb(0, 0, 0) 2px 2px 2px;
 }
 
-#historic-list {
-    margin-top: 40px;
+
+h2 {
+    font-family: var(--title-font);
+    color: var(--tertiaire-color);
+    text-align: center;
+    font-size: 3.1em;
+    margin-block: 30px;
+}
+
+.streamer-item {
+    width: 280px;
+    height: 280px;
+    margin: auto;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    background-color: var(--dark-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.streamer-item li {
+    font-family: var(--main-font);
+    color: var(--tertiaire-color);
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+
+.streamer-item:hover {
+    background-color: var(--secondary-color);
+}
+
+.streamer-item img {
+    width: 200px;
+    height: 200px;
+}
+
+#streamer-list li {
+    margin: auto;
+}
+
+@media screen and (min-width: 1000px) {
+    #streamer-list {
+        width: 900px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin: auto;
+    }
+
+    #historic-container {
+        padding-block: 40px;
+        width: 80vw;
+        height: fit-content;
+        padding-top: 20px;
+        padding-inline: 20px;
+        margin-inline: auto;
+    }
+
+    #historic-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .historic-item {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 200px;
+        border: 1px solid gray;
+        border-radius: 20px;
+        background-color: var(--dark-color);
+        padding-inline: 15px;
+        padding-block: 15px;
+        margin-bottom: 20px;
+        margin-inline: auto;
+    }
+
+    .index-description {
+        width: 80%;
+        margin: auto;
+    }
 }
