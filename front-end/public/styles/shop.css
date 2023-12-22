@@ -1,79 +1,200 @@
-* {
-    padding: 0;
+*, ::before, ::after {
     margin: 0;
+    padding: 0;
+    box-sizing:border-box;
 }
 
-footer {
-    height: 100%;
-    position: 0 0 0;
+body {
+    background-color: rgba(32,32,32,1);
 }
 
-h2 {
+p {
+    color: white;
+}
+
+.pteeshirt p {
+    padding-left: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.pforzplace {
+    padding-left: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.ptrophee p {
+    padding-left: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+h1 {
     color: rgba(112,208,56,1);
+    font-family: 'canveat', cursive;
+    width: 80%;
+    font-size: 1em;
     text-align: center;
+    display: inline-block;
+    position: relative;
+    left: 10%;
 }
 
-h3 {
-    background-color: black;
+.prod {
+    height: 89vw;
+    width: auto;
+    border-radius: 15%;
+    border-style: solid;
+    border-color: rgba(112,208,56,1);
+    box-shadow: 0px 0px 10px 2px rgba(112,208,56,0.3);
+    border-width: 2px;
+    position: relative;
+    margin-bottom: 5%;
+    top: 4vw;
+    left: 5.5%;
+}
+
+strong {
+    color: rgba(112,208,56,1);
+    position: relative;
+    left: 5%;
+
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    padding-left: 6%;
+    margin-bottom: 2%;
+}
+
+label {
+    background-color: white; 
     border-width: 2px;
     border-style: solid;
-    border-color: black;
-    color: white;
+    border-color: rgba(112,208,56,1);
+    box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 30% 30% / 30% 30%;
+    width: 50px;
+    height: 50px;
+    padding-top: 1%;
+    margin: 3px;
+    display: flex;
     text-align: center;
+    flex-direction: column;
+    font-size: 0.8em;
+    font-weight: bold;
+    -webkit-transition: color ;
+    transition: color ;
+}   
+
+label:hover {
+    background-color: rgba(112,208,56,1);
+    border-color: white;
 }
 
-img {
-    min-width: 250px;
-    min-height: auto;
-    max-width: max-content;
-    max-height: max-content;
-}
 
 .number {
     border-style: solid;
     border-width: 3px;
     border-color: white;
-    border-radius: 10%;
-
+    border-radius: 30px;
+    margin-top: 5%;
+    margin-bottom: 8%;
+    height: 19vw;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-div > p {
-    text-align: center;
-}
-
-button {
+.max {
     color: white;
-    background-color: black;
+    background-color: rgba(32,32,32,1);
+    width: 20px;
+    height: 20px;
+    position: relative;
+    bottom: 27px; 
+    left: 220px;
+    border: none;
+}
+
+.min {
+    color: white;
+    background-color: rgba(32,32,32,1);
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 10px; 
+    left: 15px;
+    border: none;
+}
+
+.buynow {
+    background-color: white;
+    color: black;
+    border-width: 4px;
+    padding: 2%;
+    border-style: solid;
+    border-color: rgba(112,208,56,1);
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.7rem;
+    position: relative;
+    left: 5%;
+    -webkit-transition: color ;
+    transition: color ;
+}
+
+.buynow:hover {
+    background-color: rgba(112,208,56,1);
+    border-color: white;
+}
+
+.divshopdetailfirst {
+    margin-top: 15%;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 3px;
+    width: 90%;
 }
 
 .divshopdetail {
     background-color: rgba(32,32,32,1);
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
-    border-color: white;
     color: white;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-body {
-    background-color: rgba(32,32,32,1);
-    width: 100%;
-    height: 100%;
-    
+.detail {
+    color: rgba(112,208,56,1);
+    position: relative;
+    left: 5%;
 }
 
-.logofooter {
-    width: 100%;
-    min-width: 280px;
-    height: 100%;
-    min-height: 280px;
-}
-
-.foot {
-    background-color: black;
-}
-
-p {
-    color: white;
+h2 {
+    color: rgba(112,208,56,1);
+    font-family: 'canveat', cursive;
+    width: 80%;
+    font-size: 1.2em;
+    text-align: center;
+    position: relative;
+    left: 10%;
+    margin-top: 10%;
 }
 
 i {
@@ -85,204 +206,677 @@ i {
     background-color: black;
 }
 
-strong {
-    color: rgba(112,208,56,1);
+form input {
+    visibility: hidden;
 }
 
-.learnmore {
-    color: rgba(112,208,56,1);
-}
-
-.help {
+.numberinput {
+    background-color: rgba(32,32,32,1);
     color: white;
+    border: none;
+    position: relative;
+    bottom: 3vw;
+    left: 41vw;
 }
 
-.faq {
-    background-color: rgba(112,208,56,1);
-    border-width: 2px;
-    border-style: solid;
-    border-color: rgba(112,208,56,1);
-    border-radius: 5%;
+a {
+    color: rgba(112,208,56,1);
 }
 
-.consultfaq {
-    background-color: white;
-    border-width: 2px;
-    border-style: solid;
-    border-color: black;
-    border-radius: 10%;
+.pay a {
     color: black;
 }
 
-label {
-    background-color: white; 
-    border-width: 2px;
-    border-style: solid;
-    border-color: rgba(112,208,56,1);
-    border-radius: 15%;
-    color: black;
+.svgarrow {
+    height: 8px;
+    width: 25px;
 }
 
-.deliverydelay {
+.aintercom {
+    fill: rgba(112,208,56,1);
+    z-index: 2;
+    display: flex;
+    position: fixed;
+    left: 85%;
+    top: 90%;
+}
+
+.bottom {
     background-color: black;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
-    border-radius: 10%;
-    color: white;
-}
-
-.dimension {
-    background-color: black;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
-    border-radius: 10%;
-    color: white;
-}
-
-.cart {
-    background-color: black;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
-    border-radius: 10%;
-    color: white;
-}
-
-.manufacturing {
-    background-color: black;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
-    border-radius: 10%;
-    color: white;
-}
-
-.detail {
-    color: rgba(112,208,56,1);
-}
-
-.impression {
-    background-color: black;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
-    border-radius: 10%;
-    color: white;
-}
-
-.design {
-    background-color: black;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
-    border-radius: 10%;
-    color: white;
-}
-
-.composition {
-    background-color: black;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
-    border-radius: 10%;
-    color: white;
-}
-
-.divcomposition {
-    background-color: black;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
-    color: white;
-}
-
-
-
-.size {
-    background-color: black;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
-    border-radius: 10%;
-    color: white;
-}
-
-.washing {
-    background-color: black;
-    border-width: 2px;
-    border-style: solid;
-    border-color: white;
-    border-radius: 10%;
-    color: white;
+    width: 100%;
 }
 
 .asso {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 10VW;
+    left: 20%;
+}
+
+
+#d12 p, #d11 p, #d10 p, #d9 p, #d8 p, #d7 p, #d6 p, #d5 p, #d4 p, #d3 p, #d2 p, #d1 p{
+    text-align: left;
+    margin: 10px;
+    position: relative;
+    left: 2%;
+    font-family: 'Quicksland, sans serif';
+}
+
+#togg12, #togg11, #togg10, #togg9, #togg8, #togg7, #togg6, #togg5, #togg4, #togg3, #togg2 {
     width: 100%;
-    min-width: 280px;
-    height: 100%;
-    min-height: 280px;
+    padding: 5%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px 5px 0 0;
 }
 
-.prod {
+#togg1 {
     width: 100%;
-    min-width: 280px;
-    height: 100%;
-    min-height: 280px;
-    border-radius: 15%;
+    text-align: center;
+    padding: 4%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px 5px 0 0;
 }
 
-.seacleaners {
-    background-color: black;
-    border-radius: 10%;
+.divshopdetailfirst svg {
+    margin-right: 5%;
 }
 
-.wwf {
-    background-color: black;
-    border-radius: 10%;
+.divshopdetail svg {
+    margin-right: 5%;
 }
 
-.lpo {
-    background-color: black;
-    border-radius: 10%;
+button{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.assostrong {
+    display: block;
+    position: relative;
+    left: 0;
+    text-align: center;
+    color: rgba(112,208,56,1);
+    margin-top: 30px;
 }
 
 .seasheperd {
     background-color: black;
-    border-radius: 10%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin: 6%;
 }
 
-.logoinsta {
-    width: 10%;
-    min-width: 28px;
-    height: 10%;
-    min-height: 28px;
+.seasheperd p {
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 1.1em;
+}
+
+.lpo {
     background-color: black;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin: 6%;
+}
+
+.lpo p {
+    text-align: left;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-size: 1.1em;
+}
+
+.wwf {
+    background-color: black;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin: 6%;
+}
+
+.wwf p {
+    text-align: left;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-size: 1.1em;
+}
+
+.seacleaners {
+    background-color: black;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin: 6%;
+}
+
+.seacleaners p {
+    text-align: left;
+    padding-right: 10%;
+    padding-left: 10%;
+    font-size: 1.1em;
+}
+
+.learnmore {
+    color: rgba(112,208,56,1);
+    text-align: center;
+    display: block;
+    padding: 20px;
+}
+
+.faq {
+    background-color: rgba(112,208,56,1);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(112,208,56,1);
+    box-shadow: 0px 0px 10px 2px rgba(112,208,56,0.3);
+    border-radius: 15px;
+    margin: 6%;
+    display: block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.assohelp {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    margin-bottom: 20px;
+}
+
+.help {
+    color: white;
+    text-align: center;
+    position: relative;
+    left: 20%;
+    font-size: 1.4em;
+}
+
+.faq p {
+    text-align: left;
+    margin-top: 15px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 1.2em;
+}
+
+.consultfaq {
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 30px;
+    color: black;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    width: 130px;
+    height: 30px;
+    display: flex;
+    position: relative;
+    left: 8%;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: color ;
+    transition: color ;
+}
+
+.consultfaq:hover {
+background-color: black;
+color: rgba(112,208,56,1);
+}
+
+.foot {
+    background-color: black;
+}
+
+.foot p {
+    text-align: left;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.shopstrong {
+    padding-left: 2%;
+    margin-bottom: 10px;
+    color: rgba(112,208,56,1);
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.heart i {
+    display: flex;
+    position: relative;
+    left: 1%;
+    top: 2vw;
+    margin-bottom: 20px;
+    color: rgba(112,208,56,1);
+}
+
+.logofooter {
+    width: 80vw;
+    height: 50vw;
+    margin-bottom: 10%;
+    position: relative;
+    left: 5%;
 }
 
 .reseau {
     background-color: black;
+    padding-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    bottom: 5%;
 }
 
-.buynow {
-    background-color: white;
-    color: black;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgba(112,208,56,1);
-    border-radius: 10%;
-}
-
-span p {
+.pay {
+    display: flex;
+    justify-content: center;
+    padding-top: 8%;
     background-color: black;
-    color: white;
-    border-width: 1px;
-    border-style: solid;
-    border-color: white;
-    border-radius: 10%;
 }
 
-p {
-    font-family: Arial, Helvetica, sans-serif;
+.arobase {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    display: inline-block;
+    position: relative;
+    left: 40%;
+    background-color: black;
 }
+
+footer {
+    background-color: black;
+    margin-top: 2px;
+}
+
+#twitter, #insta, #reddit {
+    font-size: 2em;
+    margin: 2%;
+    -webkit-transition: color ;
+    transition: color ;
+}
+
+#twitter:hover {
+color: rgba(112,208,56,1);
+}
+
+#insta:hover {
+color: rgba(112,208,56,1);
+}
+
+#reddit:hover {
+color: rgba(112,208,56,1);
+}
+
+
+
+@media (min-width: 405px) {
+    h1 {
+        font-size: 1.5em;
+        text-align: center;
+        display: inline-block;
+        position: relative;
+        left: 10%;
+    }
+    h2 {
+        position: relative;
+        left: 20%;
+        margin-top: 10%;
+        width: 60%;
+      }
+    .prod {
+        position: relative;
+        margin-bottom: 5%;
+        margin-top: 2%;
+        left: 12%;
+        height: 75vw;
+        width: auto;
+      }    
+    strong {
+        font-size: 1.1em;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        position: relative;
+        left: 15%;
+      }
+    .pteeshirt p {
+        padding-left: 15%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    form {
+        padding-left: 8%;
+        margin-bottom: 2%;
+        width: 90%;
+    }
+    label {
+        position: relative;
+        left: 10%;
+        width: 60px;
+        height: 60px;
+        padding-top: 2%;
+        font-size: 1em;
+        margin: 2%;
+    }
+    .number {
+        width: 70%;
+        height: 14vw;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    .buynow {
+        font-size: 1.9em;
+        position: relative;
+        left: 15%;
+    }
+    .divshopdetailfirst {
+        width: 70%;
+    }
+    .divshopdetail {
+        width: 70%;
+    }
+    .detail {
+        position: relative;
+        left: 18%;
+    }
+    .pforzplace {
+        padding-left: 15%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+    .ptrophee p {
+        padding-left: 15%;
+      }
+    .asso {
+        position: relative;
+        left: 30%;
+        top: 5vw;
+      }
+    .assostrong {
+        margin-left: auto;
+    }
+    .seasheperd p {
+        width: 100%;
+        font-size: 1.2em;
+    }
+    .lpo p {
+        width: 100%;
+        font-size: 1.2em;
+    }
+    .wwf p {
+        width: 100%;
+        font-size: 1.2em;
+    }
+    .seacleaners p {
+        width: 100%;
+        font-size: 1.2em;
+    }
+    .learnmore {
+        margin-left: 6%;
+    }
+    .help {
+        font-size: 1.8em;
+        left: 22%;
+    }
+    .faq p {
+        font-size: 1.2em;
+    }
+    .consultfaq {
+        width: 40%;
+        font-size: 1.2em;
+    }
+    .shopstrong {
+        font-size: 1.2em;
+    }
+    .foot p {
+        font-size: 1.2em;
+        padding-left: 16%;
+        padding-right: 19%;
+        padding-bottom: 2%;
+    }
+    .logofooter {
+        width: 60vw;
+        height: 40vw;
+        left: 20%;
+    }
+    .numberinput {
+        margin-top: 7px;
+    }
+    .max {
+        position: relative;
+        left: 90%;
+        bottom: 55%;
+    }
+    .min {
+        position: relative;
+        left: 7%;
+        top: 27%;
+    }
+    .arobase {
+        left: 42%;
+    }
+  }
+
+  @media (min-width: 700px) {
+    h1 {
+        left: 10%;
+        font-size: 1.7em;
+    }
+    h2 {
+        font-size: 1.7em;
+        left: 15%;
+        margin-top: 5%;
+        width: 70%;
+    }
+    .prod {
+        height: 60vw;
+        left: 20%;
+    }
+    strong {
+        left: 30%;
+      }
+    .pteeshirt p {
+        padding-left: 30%;
+      }
+    form {
+        padding-left: 25%;
+        width: 73%;
+    }
+    .number {
+        width: 40%;
+        height: 8vw;
+        margin-top: 3%;
+        margin-bottom: 5%;
+    }
+    .buynow {
+        left: 30%;
+        padding: 1%;
+    }
+    .divshopdetailfirst {
+        margin-top: 10%;
+    }
+    .detail {
+        left: 15%;
+    }
+    .pforzplace p {
+        padding-left: 18%;
+        margin-bottom: 1%;
+      }
+    .ptrophee p {
+        padding-left: 30%;
+      }
+    .associations {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .seasheperd {
+        margin-left: 7%;
+        width: 40%;
+    }
+    .lpo {
+        margin-left: 0%;
+        width: 40%;
+    }
+    .wwf {
+        margin-left: 7%;
+        width: 40%;
+    }
+    .seacleaners {
+        margin-left: 0%;
+        width: 40%;
+    }
+    .asso {
+        left: 23%;
+        top: 3vw;
+      }
+    .assostrong {
+        font-size: 1.2em;
+    }
+    .faq {
+        width: 95%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+    .assohelp {
+        width: 55%;
+        height: 100%;
+        border-radius: 15px 0 0 15px;
+    }
+    .phelp {
+        padding-top: 4%;
+    }
+    .help {
+        font-size: 1.4em;
+    }
+    .faq p {
+        font-size: 1em;
+        width: 80%;;
+    }
+    .consultfaq {
+        width: 50%;
+        margin-top: 10%;
+    }
+    .foot p {
+        width: 90%;
+        padding-left: 32%;
+        padding-bottom: 1%;
+    }
+    .arobase {
+        padding-left: 3%;
+    }
+    .logofooter {
+        width: 40vw;
+        height: 25vw;
+        left: 30%;
+    }
+    .heart i {
+        top: 1vw;
+    }
+    .reseau {
+        padding-bottom: 1%;
+    }
+    .pay {
+        padding-top: 4%;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .teeshirtdesktop {
+        display: flex;
+        flex-direction: row;
+    }
+    .prod {
+        height: 40vw;
+        left: 15%;
+    }
+    .pteeshirt {
+        width: 65%;
+        height: auto;
+        margin-top: 3%;
+    }
+    strong {
+        text-align: left;
+    }
+    .teeshirt p {
+        text-align: left;
+    }
+    .number {
+        height: 6vw;
+        width: 47%;
+        position: relative;
+        left: 3%;
+    }
+    .zplacedesktop {
+        display: flex;
+        flex-direction: row;
+    }
+    .pzplace {
+        width: 65%;
+        height: auto;
+        margin-top: 7%;
+    }
+    .pforzplace {
+        padding-bottom: 20%;
+    }
+    .tropheedesktop {
+        display: flex;
+        flex-direction: row;
+    }
+    .ptrophee {
+        width: 65%;
+        height: auto;
+        margin-top: 7%;
+    }
+    .ptrophee p {
+        padding-bottom: 27%;
+    }
+    .associations {
+        padding-left: 3%;
+    }
+    .seasheperd {
+        width: 30%;
+        margin: 1%;
+    }
+    .lpo {
+        width: 30%;
+        margin: 1%;
+    }
+    .wwf{
+        width: 30%;
+        margin: 1%;
+    }
+    .seacleaners{
+        width: 30%;
+        margin: 1%;
+    }
+    .faq p {
+        margin-bottom: 10%;
+    }
+
+    .pfootfordesktop {
+        display: flex;
+        flex-direction: row;
+    }
+    .pfoot1fordesktop {
+        position: relative;
+        left: 25%;
+        padding-top: 10%;
+    }
+    .pfoot1fordesktop p {
+        text-align: left;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-bottom: 2%;
+    }
+    .pfoot2fordesktop {
+        padding-top: 15%;
+        padding-left: 10%;
+    }
+  }
