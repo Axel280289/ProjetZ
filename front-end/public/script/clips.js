@@ -52,9 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
         //jvTitre.innerHTML = "";
 
       jvs.forEach((jv) => {
-        jvTitre.innerHTML += `<article id="jeux videos">
+        jvTitre.innerHTML += `<article class="jeux-videos">
          <a href="${jv.url}"> <img src="/images/${jv.titre.toLowerCase().split(' ').join('-')}.webp"></a>
-         <h3 id="titreJeux"> ${jv.titre} </h3></article>`
+         <h3 class="titreJeux"> ${jv.titre} </h3></article>`
       });
     })
     .catch((error) =>

@@ -28,7 +28,6 @@ body {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  justify-content: center;
   flex-grow: 1;
 }
 
@@ -36,9 +35,17 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 5px;
+  border-radius: 15px;
   gap: 10px;
   align-items: center;
   background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.video-clip:hover {
+  background-color: var(--secondary-color);
+  color: white;
 }
 
 .video-clip video{
@@ -64,6 +71,7 @@ body {
   justify-content: center;
   gap: 10px;
   font-size: 0.8rem;
+  color: white;
 }
 
 .vu div {
@@ -76,7 +84,6 @@ body {
   display: flex;
   justify-content: center;
   gap: 10px;
-  color: var(--secondary-color);
   width: 90%;
   font-size: 0.8rem;
   align-items: center;
@@ -84,6 +91,10 @@ body {
 
 .streamer img {
   width: 30%;
+}
+
+.activité {
+  color: white;
 }
 /* Parametrage sidebar */
 
@@ -135,7 +146,7 @@ body {
   text-decoration: none;
 }
 
-#select-day ul li:hover {
+#select-day ul li:hover{
   display: flex;
   align-items: center;
   background-color: var(--secondary-color);
@@ -179,8 +190,35 @@ body {
   margin: auto;
 }
 
+.jeux-videos {
+  width: 100%;
+  border-radius: 15px;
+  color: var(--secondary-color);
+  padding: 10px;
+}
+
+.jeux-videos:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.jeux-videos img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.titreJeux {
+  text-align: center;
+}
+
 @media (min-width: 700px) {
     .video-clip {
+      width: 49%;
+    }
+
+    .jeux-videos {
       width: 49%;
     }
   }
@@ -203,7 +241,7 @@ body {
       width: 250px;
     }
 
-    #nav-sidebar li:hover{
+    #nav-sidebar li:not(:nth-child(-n+2)):hover{
       display: flex;
       align-items: center;
       justify-content: center;
@@ -225,6 +263,10 @@ body {
 
     .video-clip {
       width: 22%;
+    }
+
+    .jeux-videos {
+      width: 25%;
     }
 
     #page-titre {
