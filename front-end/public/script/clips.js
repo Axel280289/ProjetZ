@@ -55,20 +55,6 @@ document.addEventListener("DOMContentLoaded", function () {
         jvTitre.innerHTML += `<article id="jeux videos">
          <a href="${jv.url}"> <img src="/images/${jv.titre.toLowerCase().split(' ').join('-')}.webp"></a>
          <h3 id="titreJeux"> ${jv.titre} </h3></article>`
-        // const nouvelArticle = document.createElement("article");
-        // const nouvelleImage = document.createElement('img');
-        // const nouveauTitre = document.createElement("h3");
-
-        // nouvelleImage.setAttribute("src", `/images/${jv.titre.toLowerCase().split(' ').join('-')}.webp`)
-        // // Attribution du titre au h3
-        // nouveauTitre.textContent = jv.titre;
-
-        // // Ajout du h3 à l'article
-        // nouvelArticle.appendChild(nouvelleImage)
-        // nouvelArticle.appendChild(nouveauTitre);
-
-        // // Ajout de l'article à l'élément parent
-        // jvTitre.appendChild(nouvelArticle);
       });
     })
     .catch((error) =>
