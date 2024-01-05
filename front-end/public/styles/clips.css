@@ -190,6 +190,9 @@ body {
   margin: auto;
 }
 
+a {
+  text-decoration: none;
+}
 .jeux-videos {
   width: 100%;
   border-radius: 15px;

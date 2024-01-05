@@ -9,7 +9,6 @@ const methodOverride = require("method-override"); // Permet d'ajouter un param�
 const cookieParser = require("cookie-parser"); // Permet de récupérer les données des cookie de l'objet request
 const cors = require("cors");
 const app = express(); // J'initialise le serveur de mon application avec la fonction express.
-const cors = require('cors');
 const multer = require('multer');
 dotenv.config(); // J'utilise la méthode config de dotenv pour connecter mon fichier .env et accéder à ses variables
 
@@ -17,6 +16,7 @@ dotenv.config(); // J'utilise la méthode config de dotenv pour connecter mon fi
 const associationsRoutes = require("./routes/associations");
 const clipsRoutes = require("./routes/clips");
 const statsRoutes = require("./routes/stats");
+const shopRoutes = require("./routes/shop")
 
 app.use(cors());
 // J'utilise la méthode urlencoded pour récupérer les informations d'un formulaire et les stocker dans req.body
@@ -64,6 +64,7 @@ app.use("/script", express.static(`${__dirname}/public/script`));
 app.use("/associations", require("./routes/associations"));
 app.use("/clips", require("./routes/clips"));
 app.use("/stats", require("./routes/stats"));
+app.use("/shop", require("./routes/shop") )
 
 // J'écoute les informations émis par mon application (app) avec la méthode listen, sans cette méthode le serveur ne peut fonctionner
 app.listen(process.env.PORT || 3000, () => {
