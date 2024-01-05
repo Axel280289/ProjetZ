@@ -1,144 +1,691 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./public/styles/shop.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../public/styles/shop.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat&family=Quicksand&display=swap">
+    <link rel="header" href="./public/styles/header.css">
+    <title>La boutique</title>
 </head>
 <body>
-    <header>
-        <div>
-            <nav id="nav" class="">
-                <img class="logo header" src="./public/images/other img/zevent-logo.webp" alt="Logo du Zevent">
-                <ul>
-                    <li><a href="">Faire un don</a></li>
-                    <li><a href="">La boutique</a></li>
-                    <li><a href="">Tops</a></li>
-                    <li><a href="">Best of</a></li>
-                    <li><a href="">Tops par streamers</a></li>
-                    <li><a href="">Récents</a></li>
-                    <li><a href="">Jeux</a></li>
-                </ul>
-                <div id="icons">
-                    <i class="fa-solid fa-bars fa-2xl"></i>
-                </div>
-            </nav>
-                <div class="rs">
-                    <a href="https://twitter.com/ZEventfr/header_photo"><i class="fa-brands fa-twitter fa-xl" style="color: #ffffff;"></i></a>
-                    <i class="fa-brands fa-instagram fa-xl" style="color: #ffffff;"></i>
-                    <i class="fa-brands fa-reddit-alien fa-xl" style="color: #ffffff;"></i>
-                </div>
-        </div>
-    </header>
+    <header class="header"></header>
+    
     <main>
-        <section class="shop">
-            <div class="teeshirt">
-                <h2>Tee-shirt Bio - officiel Zevent 2022</h2>
-                <img class="prod" src="../front-end/public/images/prod img/tshirt.webp" alt="Tee-shirt ZEvent Place">
-                <strong>Précommande</strong>
-                <p>€26,00 Taxes incluses</p>
-                <strong>Tailles</strong>
-                <p>Sélectionnez une taille</p>
-                <div class="allsize">
-                    <a href="xs" class="sizing">XS</a>
-                    <a href="s" class="sizing">S</a>
-                    <a href="m" class="sizing">M</a>
-                    <a href="l" class="sizing">L</a>
-                    <a href="xl" class="sizing">XL</a>
-                    <a href="xxl" class="sizing">XXL</a>
-                    <a href="xxxl" class="sizing">XXXL</a>
+        <a href="" class="aintercom">
+            <svg viewBox="0 0 28 32" width="28" height="32">
+                <path d="M28,32 C28,32 23.2863266,30.1450667 19.4727818,28.6592 L3.43749107,28.6592 C1.53921989,28.6592 0,27.0272 0,25.0144 L0,3.6448 C0,1.632 1.53921989,0 3.43749107,0 L24.5615088,0 C26.45978,0 27.9989999,1.632 27.9989999,3.6448 L27.9989999,22.0490667 L28,22.0490667 L28,32 Z M23.8614088,20.0181333 C23.5309223,19.6105242 22.9540812,19.5633836 22.5692242,19.9125333 C22.5392199,19.9392 19.5537934,22.5941333 13.9989999,22.5941333 C8.51321617,22.5941333 5.48178311,19.9584 5.4277754,19.9104 C5.04295119,19.5629428 4.46760991,19.6105095 4.13759108,20.0170667 C3.97913051,20.2124916 3.9004494,20.4673395 3.91904357,20.7249415 C3.93763774,20.9825435 4.05196575,21.2215447 4.23660523,21.3888 C4.37862552,21.5168 7.77411059,24.5386667 13.9989999,24.5386667 C20.2248893,24.5386667 23.6203743,21.5168 23.7623946,21.3888 C23.9467342,21.2215726 24.0608642,20.9827905 24.0794539,20.7254507 C24.0980436,20.4681109 24.0195551,20.2135019 23.8614088,20.0181333 Z"></path>
+            </svg>
+        </a>
+        <section class="teeshirt">
+            <h1>Tee-shirt Bio - officiel Zevent 2022</h1>
+            <div class="teeshirtdesktop">
+                <div class="sliders-container slider-1">
+                    <div class="slider">
+                        <img class="prod" src="../front-end/public/images/prod img/tshirt.webp" alt="Tee-shirt ZEvent Place">
+                    </div>
                 </div>
-                <strong>Quantité</strong>
-                <div><p>1</p></div>
-                <a href="shop details.html" class="buynow" >Acheter maintenant</a>
-                <a href="./shop details.html" class="composition" >Composition & Fabrication</a>
-                <a href="./shop details.html" class="deliverydelay" >Délais de livraison</a>
-                <a href="./shop details.html" class="size" >Taille</a>
-                <a href="./shop details.html" class="washing">Lavage</a>
-                <a href="./shop details.html" class="detail">Afficher les détails-></a>
+                <div class="pteeshirt">
+                    <strong>Précommande</strong>
+                    <p>€26,00 Taxes incluses</p>
+                    <strong>Tailles</strong>
+                    <p>Sélectionnez une taille</p>
+                    <form>
+                        <label>
+                            <input type="radio" name="size" valeur="xs"> XS
+                        </label>
+                        <label>
+                            <input type="radio" name="size" valeur="s"> S
+                        </label>
+                        <label>
+                            <input type="radio" name="size" valeur="m"> M
+                        </label>
+                        <label>
+                            <input type="radio" name="size" valeur="l"> L
+                        </label>
+                        <label>
+                            <input type="radio" name="size" valeur="xl"> XL
+                        </label>
+                        <label>
+                            <input type="radio" name="size" valeur="xxl"> XXL
+                        </label>
+                        <label>
+                            <input type="radio" name="size" valeur="xxxl"> XXXL
+                        </label>
+                    </form>
+                    <strong>Quantité</strong>
+                    <div class="number">
+                        <button class="min">-</button>
+                            <input class="numberinput" type="number" name="number" min="0" max="20">
+                        <button class="max">+</button>
+                    </div>
+                    <a href="" class="buynow" >Acheter maintenant</a>
+                </div>
             </div>
-            <div class="zplace">
-                <h2>ZEvent Place - Tirage sur Dibond</h2>
+            <div class="divshopdetailfirst">
+                <button id="togg1">
+                    <svg 
+                    class="icon icon-accordion color-foreground-text" 
+                    aria-hidden="true" 
+                    focusable="false" 
+                    role="presentation" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="20" 
+                    height="20" 
+                    viewBox="0 0 20 20"
+                    fill="#ffffff"
+                >
+
+                    <path d="M18.6307 0.0851008C18.9214 0.143319 19.2573 0.251631 19.499 0.483071C19.7487 0.722288 19.8616 1.06444 19.9202 1.35568C19.9821 1.66275 20.0008 2.00418 20 2.32523C19.9986 2.89096 19.9355 3.45932 19.9011 3.76888C19.8965 3.81064 19.8924 3.8477 19.889 3.8794L19.8885 3.88469C19.7574 5.00604 19.5546 6.53586 19.2559 8.16345C18.9577 9.77538 18.5618 11.5447 18.0423 13.1175L18.0415 13.1198C17.54 14.6143 16.835 16.2292 15.7876 17.2779C12.1807 20.8897 6.31722 20.917 2.70668 17.3017C-0.903844 13.6864 -0.876728 7.8151 2.73025 4.20335C3.77726 3.15495 5.37751 2.44898 6.88416 1.94609L6.88527 1.94573C8.4557 1.42559 10.21 1.02928 11.8328 0.73059C13.4582 0.431407 14.986 0.228254 16.1059 0.097027L16.1111 0.0964089C16.1231 0.0951308 16.1358 0.0937998 16.1492 0.09237C16.4416 0.0610531 17.0517 -0.0042707 17.6652 0.000220251C17.9855 0.00256445 18.3248 0.0238389 18.6307 0.0851008ZM16.2207 1.10269C15.114 1.23241 13.6107 1.4325 12.0155 1.72612C10.4166 2.02043 8.71247 2.40674 7.20334 2.90653C5.72522 3.39993 4.31684 4.04614 3.44505 4.91909C0.229287 8.13911 0.209266 13.3695 3.42148 16.5859C6.63368 19.8024 11.8571 19.7822 15.0728 16.5622C15.9442 15.6897 16.5895 14.2687 17.0829 12.7984C17.5818 11.2879 17.9676 9.5703 18.2616 7.98044C18.5549 6.38318 18.7546 4.8779 18.8841 3.76969C18.8878 3.73473 18.8921 3.69563 18.8969 3.65288C18.9315 3.33899 18.9879 2.82875 18.9891 2.32275C18.9898 2.03445 18.9722 1.76875 18.9293 1.5558C18.8832 1.32703 18.8229 1.23626 18.8002 1.21454C18.7694 1.18504 18.6656 1.12434 18.4325 1.07766C18.2146 1.03402 17.9461 1.01452 17.6578 1.01241C17.1035 1.00835 16.5429 1.06826 16.2505 1.09951C16.2402 1.10061 16.2303 1.10167 16.2207 1.10269Z"></path>
+
+                    <path d="M19.4297 0.501734C19.6261 0.7004 19.6244 1.02084 19.426 1.21747L0.860985 19.6161C0.662582 19.8127 0.342561 19.811 0.146198 19.6124C-0.0501654 19.4137 -0.0485124 19.0933 0.14989 18.8966L18.7149 0.498038C18.9133 0.301414 19.2334 0.303069 19.4297 0.501734Z"></path>
+
+                    <path d="M5.62257 2.4772H6.12801V13.6663H17.3961V14.1724H5.62257V2.4772Z"></path>
+
+                    <path d="M10.1879 1.18752H10.6933L10.6933 9.14731H18.7842V9.65342H10.1879L10.1879 1.18752Z"></path>
+
+                    </svg>
+                Composition & Fabrication</button>
+                <div id="d1">
+                    <p>100% coton biologique - 170 g</p>
+                    <p>Ce tee-shirt est certifié Oeko-Tex Standard 100, Fairwear, GOTS, PETA Approved Vegan</p>
+                    <p>Nous sommes convaincus, comme vous, qu'il est important d'avoir de la transparence et une traçabilité sur les produits que nous achetons. Merci d'avoir cliqué pour en savoir plus.</p>
+                    <p>Les t-shirts sont fabriqués en coton bio et ont reçu le label GOTS. Ils ont été montés dans des usines labellisées Fairwear au Bangladesh puis imprimés dans un atelier GOTS à Bidart en France.</p>
+                    <p>Si vous voulez en savoir plus sur notre partenaire Stanley Stella qui produit nos tee-shirts noirs, vous pouvez aller sur ce site <a>:stanleystella.com</a> ou télécharger leur <a>Social Report 2021</a></p>
+                    <p>Pour en savoir plus sur le Label GOTS <a>:labelinfo.be</a></p>
+                </div>
+            </div>
+            <div class="divshopdetail">
+                <button id="togg2">
+                    <svg 
+                    class="icon icon-accordion color-foreground-text" 
+                    aria-hidden="true" 
+                    focusable="false" 
+                    role="presentation" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="20" 
+                    height="20" 
+                    viewBox="0 0 20 20"
+                    fill="#ffffff"
+                >
+
+                    <path d="M0 3.75156C0 3.47454 0.224196 3.24997 0.500755 3.24997H10.647C10.9235 3.24997 11.1477 3.47454 11.1477 3.75156V5.07505V5.63362V6.10938V13.6616C10.9427 14.0067 10.8813 14.1101 10.5516 14.6648L7.22339 14.6646V13.6614H10.1462V4.25316H1.00151V13.6614H2.6842V14.6646H0.500755C0.224196 14.6646 0 14.44 0 14.163V3.75156Z"></path>
+
+                    <path d="M18.9985 8.08376L11.1477 6.10938V5.07505L19.6212 7.20603C19.8439 7.26203 20 7.46255 20 7.69253V14.1631C20 14.4401 19.7758 14.6647 19.4992 14.6647H17.3071V13.6615H18.9985V8.08376ZM11.1477 13.6616L13.3442 13.6615L13.3443 14.6647L10.5516 14.6648L11.1477 13.6616Z"></path>
+
+                    <path d="M7.71269 14.1854C7.71269 15.6018 6.56643 16.75 5.15245 16.75C3.73847 16.75 2.59221 15.6018 2.59221 14.1854C2.59221 12.7691 3.73847 11.6209 5.15245 11.6209C6.56643 11.6209 7.71269 12.7691 7.71269 14.1854ZM5.15245 15.7468C6.01331 15.7468 6.71118 15.0478 6.71118 14.1854C6.71118 13.3231 6.01331 12.6241 5.15245 12.6241C4.29159 12.6241 3.59372 13.3231 3.59372 14.1854C3.59372 15.0478 4.29159 15.7468 5.15245 15.7468Z"></path>
+
+                    <path d="M17.5196 14.1854C17.5196 15.6018 16.3733 16.75 14.9593 16.75C13.5454 16.75 12.3991 15.6018 12.3991 14.1854C12.3991 12.7691 13.5454 11.6209 14.9593 11.6209C16.3733 11.6209 17.5196 12.7691 17.5196 14.1854ZM14.9593 15.7468C15.8202 15.7468 16.5181 15.0478 16.5181 14.1854C16.5181 13.3231 15.8202 12.6241 14.9593 12.6241C14.0985 12.6241 13.4006 13.3231 13.4006 14.1854C13.4006 15.0478 14.0985 15.7468 14.9593 15.7468Z"></path>
+
+                    </svg>
+                Délais de livraison</button> 
+                <div id="d2">
+                    <p>Les t-shirt seront expédiés à partir du 3 octobre.</p>
+                    <p>Le planning de production des produits de la boutique ZEvent est consultable <a>ici</a></p>
+                </div>
+            </div>
+            <div class="divshopdetail">
+                <button id="togg3">
+                    <svg 
+                    class="icon icon-accordion color-foreground-text" 
+                    aria-hidden="true" 
+                    focusable="false" 
+                    role="presentation" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="20" 
+                    height="20" 
+                    viewBox="0 0 20 20"
+                    fill="#ffffff"
+                >
+
+                    <path d="M18.9836 5.32852L14.6715 1.01638L1.01638 14.6715L5.32852 18.9836L18.9836 5.32852ZM15.3902 0.297691C14.9933 -0.0992303 14.3497 -0.0992303 13.9528 0.297691L0.297691 13.9528C-0.0992301 14.3497 -0.0992305 14.9932 0.297691 15.3902L4.60983 19.7023C5.00675 20.0992 5.65029 20.0992 6.04721 19.7023L19.7023 6.04721C20.0992 5.65029 20.0992 5.00675 19.7023 4.60983L15.3902 0.297691Z" fill-rule="evenodd"></path>
+
+                    <path d="M11.7863 2.67056C11.9848 2.4721 12.3065 2.4721 12.505 2.67056L14.4237 4.58927C14.6222 4.78774 14.6222 5.1095 14.4237 5.30796C14.2252 5.50642 13.9035 5.50642 13.705 5.30796L11.7863 3.38925C11.5878 3.19079 11.5878 2.86902 11.7863 2.67056Z"></path>
+
+                    <path d="M8.93891 5.36331C9.13737 5.16485 9.45914 5.16485 9.6576 5.36331L11.5763 7.28202C11.7748 7.48048 11.7748 7.80225 11.5763 8.00071C11.3779 8.19917 11.0561 8.19917 10.8576 8.00071L8.93891 6.082C8.74045 5.88354 8.74045 5.56177 8.93891 5.36331Z"></path>
+
+                    <path d="M6.24307 8.20742C6.44153 8.00896 6.76329 8.00896 6.96175 8.20742L8.88047 10.1261C9.07893 10.3246 9.07893 10.6464 8.88047 10.8448C8.68201 11.0433 8.36024 11.0433 8.16178 10.8448L6.24307 8.92611C6.0446 8.72765 6.0446 8.40588 6.24307 8.20742Z"></path>
+
+                    <path d="M3.37296 10.8776C3.57142 10.6791 3.89319 10.6791 4.09165 10.8776L6.01036 12.7963C6.20882 12.9948 6.20882 13.3165 6.01036 13.515C5.8119 13.7134 5.49013 13.7134 5.29167 13.515L3.37296 11.5963C3.1745 11.3978 3.1745 11.076 3.37296 10.8776Z"></path>
+
+                    </svg>
+                Taille</button>   
+                <div id="d3">              
+                    <p>Ce t-shirt est unisexe !</p>
+                    <p>Pour les hommes : prenez votre taille habituelle</p>
+                    <p>Pour les femmes : prenez une taille en dessous</p>
+                </div>
+            </div>
+            <div class="divshopdetail">
+                <button id="togg4">
+                    <svg 
+                    class="icon icon-accordion color-foreground-text" 
+                    aria-hidden="true" 
+                    focusable="false" 
+                    role="presentation" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="20" 
+                    height="20" 
+                    viewBox="0 0 20 20"
+                    fill="#ffffff"
+                >
+
+                    <path d="M0.38191 4.26524C0.652327 4.19778 0.926646 4.36065 0.994619 4.62903L3.53292 14.6511C3.54914 14.7106 3.60034 14.7479 3.65788 14.7479H16.3422C16.3998 14.7479 16.451 14.7106 16.4672 14.651C16.4673 14.6506 16.4675 14.6502 16.4676 14.6498L19.0054 4.62904C19.0734 4.36066 19.3477 4.19778 19.6181 4.26523C19.8885 4.33269 20.0526 4.60494 19.9847 4.87332L17.4458 14.8982L17.4447 14.9023C17.3149 15.3972 16.867 15.75 16.3422 15.75H3.65788C3.13313 15.75 2.68527 15.3972 2.55542 14.9023L2.55434 14.8982L0.0153513 4.87333C-0.0526214 4.60495 0.111492 4.3327 0.38191 4.26524Z"></path>
+
+                    <path d="M6.76169 7.36178C6.11228 7.20142 5.40174 7.36303 4.75389 7.71568L4.74572 7.72013L4.73738 7.72427C4.55194 7.81655 4.38964 7.91308 4.21117 8.01923C4.0989 8.08601 3.98022 8.1566 3.84536 8.23232C3.52401 8.41277 3.15453 8.59357 2.72811 8.67939L2.71955 8.68111C2.08915 8.79675 1.53984 8.55856 1.12774 8.33954L1.6044 7.45611C1.97602 7.65361 2.26006 7.74481 2.53197 7.69634C2.80109 7.64144 3.05982 7.52202 3.34815 7.36012C3.43695 7.31026 3.53611 7.25156 3.64095 7.1895C3.84288 7.06996 4.06587 6.93795 4.27647 6.83261C5.06232 6.40671 6.03295 6.1502 7.00242 6.38856C7.69625 6.55146 8.31122 6.91064 8.84283 7.22112C8.93772 7.27654 9.02996 7.33041 9.11951 7.38134C9.54269 7.61551 9.86129 7.74878 10.1516 7.70566C10.5743 7.61348 10.9584 7.3965 11.4176 7.12784C11.4329 7.11892 11.4482 7.10994 11.4636 7.1009C11.8908 6.85074 12.3909 6.55782 12.968 6.42066C13.9716 6.13864 15.01 6.39498 15.8247 6.85665C16.0106 6.953 16.2099 7.06983 16.3941 7.17778C16.5001 7.2399 16.6011 7.29909 16.6916 7.34975C16.9673 7.50401 17.2202 7.62511 17.4814 7.69408C17.6558 7.74014 17.8437 7.72276 18.0658 7.64569C18.2042 7.59767 18.3474 7.52933 18.4995 7.44684L18.9839 8.32612C18.8074 8.42189 18.6102 8.51838 18.399 8.59167C18.0548 8.71111 17.6518 8.77606 17.2218 8.6625C16.8378 8.56111 16.4976 8.39159 16.1957 8.22267C16.064 8.14895 15.9478 8.08055 15.8372 8.01544C15.6731 7.91888 15.5214 7.82959 15.3497 7.741L15.3404 7.73618L15.3312 7.73097C14.673 7.35597 13.9098 7.1946 13.2351 7.38713L13.2233 7.39052L13.2113 7.39332C12.7842 7.49304 12.3982 7.71742 11.9304 7.99113L11.9227 7.99562C11.4802 8.25451 10.9593 8.55926 10.35 8.68837L10.3384 8.69081L10.3268 8.69271C9.64242 8.8049 9.02791 8.47817 8.62508 8.2551L8.62016 8.25237C8.51051 8.19005 8.40451 8.12848 8.30111 8.06845C7.7661 7.75786 7.30134 7.48804 6.76778 7.36325L6.76169 7.36178Z"></path>
+
+                    </svg>
+                Lavage</button>
+                <div id="d4">
+                    <p>Laver à 30°C retourné. Ne pas mettre au sèche-linge. Repasser à l'envers.</p>
+                </div>
+            </div>
+            <a href="productsheet.html" class="detail">Afficher les détails
+                <svg class="svgarrow" 
+                viewBox="0 0 14 10" 
+                fill="none" 
+                aria-hidden="true" 
+                focusable="false" 
+                role="presentation" 
+                class="icon icon-arrow" 
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="#70D038"></path>
+                </svg>
+            </a>
+        </section>
+        <section class="zplace">
+            <h2>ZEvent Place - Tirage sur Dibond</h2>
+            <div class="zplacedesktop">
                 <img class="prod" src="./public/images/prod img/zplace.webp" alt="ZEvent Place - Tirage sur Dibon">
-                <strong>Précommande</strong>
-                <p>€60,00 Taxes incluses</p>
-                <strong>Quantité</strong>
-                <div><p>1</p></div>
-                <a href="shop details.html" class="buynow" >Acheter maintenant</a>
-                <a href="./shop details.html" class="dimension" >Dimensions</a>
-                <a href="./shop details.html" class="manufacturing">Fabrications</a>
-                <a href="./shop details.html" class="impression" >Impression</a>
-                <a href="./shop details.html" class="design">Design exclusif</a>
-                <a href="./shop details.html" class="detail">Afficher les détails-></a>
+                <div class="pzplace">
+                    <strong>Précommande</strong>
+                    <div class="pforzplace">
+                        <p>Photo non contractuel</p>
+                        <p>€60,00 Taxes incluses</p>
+                    </div>
+                    <strong>Quantité</strong>
+                    <div class="number">
+                        <button class="min">-</button>
+                            <input class="numberinput" type="number" name="number" min="1" max="100">
+                        <button class="max">+</button>
+                    </div>
+                    <a href="" class="buynow" >Acheter maintenant</a>
+                </div>
             </div>
-            <div class="trophee">
-                <h2>Trophée numéroté ZEvent 2022</h2>
+                <div class="divshopdetailfirst">
+                    <button id="togg5">
+                        <svg 
+                        class="icon icon-accordion color-foreground-text" 
+                        aria-hidden="true" 
+                        focusable="false" 
+                        role="presentation" 
+                        xmlns="http://www.w3.org/2000/svg" 
+                        width="20" 
+                        height="20" 
+                        viewBox="0 0 20 20"
+                        fill="#ffffff"
+                    >
+
+                        <path d="M18.9836 5.32852L14.6715 1.01638L1.01638 14.6715L5.32852 18.9836L18.9836 5.32852ZM15.3902 0.297691C14.9933 -0.0992303 14.3497 -0.0992303 13.9528 0.297691L0.297691 13.9528C-0.0992301 14.3497 -0.0992305 14.9932 0.297691 15.3902L4.60983 19.7023C5.00675 20.0992 5.65029 20.0992 6.04721 19.7023L19.7023 6.04721C20.0992 5.65029 20.0992 5.00675 19.7023 4.60983L15.3902 0.297691Z" fill-rule="evenodd"></path>
+
+                        <path d="M11.7863 2.67056C11.9848 2.4721 12.3065 2.4721 12.505 2.67056L14.4237 4.58927C14.6222 4.78774 14.6222 5.1095 14.4237 5.30796C14.2252 5.50642 13.9035 5.50642 13.705 5.30796L11.7863 3.38925C11.5878 3.19079 11.5878 2.86902 11.7863 2.67056Z"></path>
+
+                        <path d="M8.93891 5.36331C9.13737 5.16485 9.45914 5.16485 9.6576 5.36331L11.5763 7.28202C11.7748 7.48048 11.7748 7.80225 11.5763 8.00071C11.3779 8.19917 11.0561 8.19917 10.8576 8.00071L8.93891 6.082C8.74045 5.88354 8.74045 5.56177 8.93891 5.36331Z"></path>
+
+                        <path d="M6.24307 8.20742C6.44153 8.00896 6.76329 8.00896 6.96175 8.20742L8.88047 10.1261C9.07893 10.3246 9.07893 10.6464 8.88047 10.8448C8.68201 11.0433 8.36024 11.0433 8.16178 10.8448L6.24307 8.92611C6.0446 8.72765 6.0446 8.40588 6.24307 8.20742Z"></path>
+
+                        <path d="M3.37296 10.8776C3.57142 10.6791 3.89319 10.6791 4.09165 10.8776L6.01036 12.7963C6.20882 12.9948 6.20882 13.3165 6.01036 13.515C5.8119 13.7134 5.49013 13.7134 5.29167 13.515L3.37296 11.5963C3.1745 11.3978 3.1745 11.076 3.37296 10.8776Z"></path>
+
+                        </svg>
+                    Dimensions</button>
+                    <div id="d5">
+                        <p>Taille 50x50 cm</p>
+                    </div>
+                </div>
+            <div class="divshopdetail">
+                <button id="togg6">
+                    <svg 
+                    class="icon icon-accordion color-foreground-text" 
+                    aria-hidden="true" 
+                    focusable="false" 
+                    role="presentation" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="20" 
+                    height="20" 
+                    viewBox="0 0 20 20"
+                    fill="#ffffff"
+                >
+
+                    <path d="M9.91038 18.5904L14.9458 9.80988C17.1744 5.9237 14.4213 1.03316 10.004 1.03316C5.61856 1.03316 2.85676 5.85475 5.01217 9.74644L9.91038 18.5904ZM10.004 0C4.84496 0 1.59264 5.67261 4.13039 10.2547L9.34236 19.6651C9.58751 20.1078 10.2108 20.1126 10.4625 19.6737L15.82 10.3316C18.4445 5.75498 15.2016 0 10.004 0Z" fill-rule="evenodd"></path>
+
+                    <path d="M12.9997 6.79602C12.9997 8.5559 11.6011 9.98256 9.87597 9.98256C8.1508 9.98256 6.75228 8.5559 6.75228 6.79602C6.75228 5.03615 8.1508 3.60949 9.87597 3.60949C11.6011 3.60949 12.9997 5.03615 12.9997 6.79602ZM9.87597 8.9494C11.0418 8.9494 11.9869 7.9853 11.9869 6.79602C11.9869 5.60675 11.0418 4.64265 9.87597 4.64265C8.71015 4.64265 7.76506 5.60675 7.76506 6.79602C7.76506 7.9853 8.71015 8.9494 9.87597 8.9494Z"></path>
+
+                    </svg>
+                Fabrications</button>
+                <div id="d6">
+                    <p>Imprimé en France FR</p>
+                </div>
+            </div>
+            <div class="divshopdetail">
+                <button id="togg7">
+                    <svg 
+                    class="icon icon-accordion color-foreground-text" 
+                    aria-hidden="true" 
+                    focusable="false" 
+                    role="presentation" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="20" 
+                    height="20" 
+                    viewBox="0 0 20 20"
+                    fill="#ffffff"
+                >
+
+                    <path d="M9.56285 11.959C9.36021 11.959 9.19593 11.7947 9.19593 11.5921V11.4654C9.19266 10.9745 9.27959 10.5556 9.51194 10.162C9.73885 9.77751 10.0875 9.44653 10.5519 9.09905C10.9668 8.78804 11.2183 8.53255 11.3688 8.28844C11.5132 8.05415 11.577 7.80994 11.577 7.49433V7.48101C11.577 6.58737 10.9199 5.94963 10.0093 5.94963C9.14693 5.94963 8.48176 6.556 8.39691 7.55858C8.38999 7.64041 8.35581 7.71754 8.29986 7.77765L8.29366 7.78431C8.22548 7.85755 8.13034 7.89977 8.03028 7.90119L7.55903 7.90785C7.43278 7.90963 7.31449 7.84638 7.24586 7.7404C7.19061 7.65507 7.1738 7.55171 7.19715 7.45492C7.30916 5.93601 8.41577 4.74287 10.0217 4.74287C11.6246 4.74287 12.8131 5.91906 12.8131 7.46103V7.47435C12.8131 7.98614 12.6995 8.4388 12.4473 8.86135C12.199 9.27731 11.8283 9.64397 11.3455 10.0059L11.3431 10.0077C10.929 10.313 10.7058 10.5344 10.5791 10.746C10.4596 10.9455 10.4072 11.1677 10.4072 11.5174V11.5921C10.4072 11.7947 10.2429 11.959 10.0403 11.959H9.56285ZM10.7049 14.3815C10.7049 14.8554 10.3695 15.2613 9.86668 15.2613C9.36996 15.2613 9.02231 14.862 9.02231 14.3815C9.02231 13.9045 9.37305 13.5084 9.86668 13.5084C10.3665 13.5084 10.7049 13.911 10.7049 14.3815Z"></path>
+
+                    <path d="M18.5 10C18.5 14.6944 14.6944 18.5 10 18.5C5.30558 18.5 1.5 14.6944 1.5 10C1.5 5.30558 5.30558 1.5 10 1.5C14.6944 1.5 18.5 5.30558 18.5 10ZM10 17.4967C14.1403 17.4967 17.4967 14.1403 17.4967 10C17.4967 5.85971 14.1403 2.50335 10 2.50335C5.85971 2.50335 2.50335 5.85971 2.50335 10C2.50335 14.1403 5.85971 17.4967 10 17.4967Z"></path>
+
+                    </svg>
+                Impression</button>
+                <div id="d7">
+                    <p>Impression à plat directement Dibond (fines plaques d’aluminium) avec des encres 100% écologiques et en haute définition. Cette œuvre est fabriquée avec 2 accroches aux dos pour pouvoir l'exposer directement sur son mur.</p>
+                </div>
+            </div>
+            <div class="divshopdetail">
+                <button id="togg8">
+                    <svg 
+                    class="icon icon-accordion color-foreground-text" 
+                    aria-hidden="true" 
+                    focusable="false" 
+                    role="presentation" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="20" 
+                    height="20" 
+                    viewBox="0 0 20 20"
+                    fill="#ffffff"
+                >
+                    <path d="M16.5 7.11819H3.5L3.5 18.9997L16.5 18.9997V7.11819ZM3.5 6.11786C2.94772 6.11786 2.5 6.56573 2.5 7.11819V18.9997C2.5 19.5521 2.94772 20 3.5 20H16.5C17.0523 20 17.5 19.5521 17.5 18.9997V7.11819C17.5 6.56572 17.0523 6.11786 16.5 6.11786H3.5Z" fill-rule="evenodd"></path>
+
+                    <path d="M11.443 11.9199C11.443 12.7406 10.797 13.406 10.0001 13.406C9.20314 13.406 8.55712 12.7406 8.55712 11.9199C8.55712 11.0992 9.20314 10.4338 10.0001 10.4338C10.797 10.4338 11.443 11.0992 11.443 11.9199Z"></path>
+
+                    <path d="M10.0187 11.9202C10.3639 11.9202 10.6437 12.2001 10.6437 12.5454V15.6971C10.6437 16.0424 10.3639 16.3223 10.0187 16.3223C9.67354 16.3223 9.39372 16.0424 9.39372 15.6971V12.5454C9.39372 12.2001 9.67354 11.9202 10.0187 11.9202Z"></path>
+
+                    <path d="M6.2417 3.75956C6.2417 1.68321 7.92435 0 10 0C12.0757 0 13.7583 1.68321 13.7583 3.75956V6.12135H12.7583V3.75956C12.7583 2.23568 11.5234 1.00033 10 1.00033C8.47663 1.00033 7.2417 2.23568 7.2417 3.75956V6.12135H6.2417V3.75956Z"></path>
+
+                    </svg>
+                Design exclusif</button>
+                <div id="d8">
+                    <p>Nous attendrons la fin du ZEVENT PLACE pour réaliser l'impression de cette œuvre disponible uniquement sur la boutique ZEvent.</p>
+                </div>
+            </div>
+            <a href="productsheet.html" class="detail">Afficher les détails
+                <svg class="svgarrow"
+                viewBox="0 0 14 10" 
+                fill="none" 
+                aria-hidden="true" 
+                focusable="false" 
+                role="presentation" 
+                class="icon icon-arrow" 
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="#70D038"></path>
+                </svg>
+            </a>
+        </section>
+        <section class="trophee">
+            <h2>Trophée numéroté ZEvent 2022</h2>
+            <div class="tropheedesktop">
                 <img class="prod" src="./public/images/prod img/plaque.webp" alt="trophée numéroté">
-                <strong>Précommande</strong>
-                <p>€175,00 Taxes incluses</p>
-                <strong>Quantité</strong>
-                <P>-1+</P>
-                <a href="shop details.html" class="buynow" >Acheter maintenant</a>
-                <a href="./shop details.html" class="deliverydelay" >Délais de livraison</a>
-                <a href="./shop details.html" class="dimension" >Dimensions</a>
-                <a href="./shop details.html" class="cart" >Mise en panier</a>
-                <a href="./shop details.html" class="manufacturing">Fabrications</a>
-                <a href="./shop details.html" class="detail">Afficher les détails-></a>
+                <div class="ptrophee">
+                    <strong>Précommande</strong>
+                    <p>€175,00 Taxes incluses</p>
+                    <strong>Quantité</strong>
+                    <div class="number">
+                        <button class="min">-</button>
+                            <input class="numberinput" type="number" name="number" min="1" max="100">
+                        <button class="max">+</button>
+                    </div>
+                    <a href="" class="buynow" >Acheter maintenant</a>
+                </div>
             </div>
+            <div class="divshopdetailfirst">
+                <button id="togg9">
+                    <svg 
+                    class="icon icon-accordion color-foreground-text" 
+                    aria-hidden="true" 
+                    focusable="false" 
+                    role="presentation" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="20" 
+                    height="20" 
+                    viewBox="0 0 20 20"
+                    fill="#ffffff"
+                >
+
+                    <path d="M0 3.75156C0 3.47454 0.224196 3.24997 0.500755 3.24997H10.647C10.9235 3.24997 11.1477 3.47454 11.1477 3.75156V5.07505V5.63362V6.10938V13.6616C10.9427 14.0067 10.8813 14.1101 10.5516 14.6648L7.22339 14.6646V13.6614H10.1462V4.25316H1.00151V13.6614H2.6842V14.6646H0.500755C0.224196 14.6646 0 14.44 0 14.163V3.75156Z"></path>
+
+                    <path d="M18.9985 8.08376L11.1477 6.10938V5.07505L19.6212 7.20603C19.8439 7.26203 20 7.46255 20 7.69253V14.1631C20 14.4401 19.7758 14.6647 19.4992 14.6647H17.3071V13.6615H18.9985V8.08376ZM11.1477 13.6616L13.3442 13.6615L13.3443 14.6647L10.5516 14.6648L11.1477 13.6616Z"></path>
+
+                    <path d="M7.71269 14.1854C7.71269 15.6018 6.56643 16.75 5.15245 16.75C3.73847 16.75 2.59221 15.6018 2.59221 14.1854C2.59221 12.7691 3.73847 11.6209 5.15245 11.6209C6.56643 11.6209 7.71269 12.7691 7.71269 14.1854ZM5.15245 15.7468C6.01331 15.7468 6.71118 15.0478 6.71118 14.1854C6.71118 13.3231 6.01331 12.6241 5.15245 12.6241C4.29159 12.6241 3.59372 13.3231 3.59372 14.1854C3.59372 15.0478 4.29159 15.7468 5.15245 15.7468Z"></path>
+
+                    <path d="M17.5196 14.1854C17.5196 15.6018 16.3733 16.75 14.9593 16.75C13.5454 16.75 12.3991 15.6018 12.3991 14.1854C12.3991 12.7691 13.5454 11.6209 14.9593 11.6209C16.3733 11.6209 17.5196 12.7691 17.5196 14.1854ZM14.9593 15.7468C15.8202 15.7468 16.5181 15.0478 16.5181 14.1854C16.5181 13.3231 15.8202 12.6241 14.9593 12.6241C14.0985 12.6241 13.4006 13.3231 13.4006 14.1854C13.4006 15.0478 14.0985 15.7468 14.9593 15.7468Z"></path>
+
+                    </svg>
+                Délais de livraison</button>
+                <div id="d9">
+                    <p>Début des expéditions prévu à partir du 28 septembre.</p>
+                </div>
+            </div>
+            <div class="divshopdetail">
+                <button id="togg10">
+                    <svg 
+                    class="icon icon-accordion color-foreground-text" 
+                    aria-hidden="true" 
+                    focusable="false" 
+                    role="presentation" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="20" 
+                    height="20" 
+                    viewBox="0 0 20 20"
+                    fill="#ffffff"
+                >
+
+                    <path d="M18.9836 5.32852L14.6715 1.01638L1.01638 14.6715L5.32852 18.9836L18.9836 5.32852ZM15.3902 0.297691C14.9933 -0.0992303 14.3497 -0.0992303 13.9528 0.297691L0.297691 13.9528C-0.0992301 14.3497 -0.0992305 14.9932 0.297691 15.3902L4.60983 19.7023C5.00675 20.0992 5.65029 20.0992 6.04721 19.7023L19.7023 6.04721C20.0992 5.65029 20.0992 5.00675 19.7023 4.60983L15.3902 0.297691Z" fill-rule="evenodd"></path>
+
+                    <path d="M11.7863 2.67056C11.9848 2.4721 12.3065 2.4721 12.505 2.67056L14.4237 4.58927C14.6222 4.78774 14.6222 5.1095 14.4237 5.30796C14.2252 5.50642 13.9035 5.50642 13.705 5.30796L11.7863 3.38925C11.5878 3.19079 11.5878 2.86902 11.7863 2.67056Z"></path>
+
+                    <path d="M8.93891 5.36331C9.13737 5.16485 9.45914 5.16485 9.6576 5.36331L11.5763 7.28202C11.7748 7.48048 11.7748 7.80225 11.5763 8.00071C11.3779 8.19917 11.0561 8.19917 10.8576 8.00071L8.93891 6.082C8.74045 5.88354 8.74045 5.56177 8.93891 5.36331Z"></path>
+
+                    <path d="M6.24307 8.20742C6.44153 8.00896 6.76329 8.00896 6.96175 8.20742L8.88047 10.1261C9.07893 10.3246 9.07893 10.6464 8.88047 10.8448C8.68201 11.0433 8.36024 11.0433 8.16178 10.8448L6.24307 8.92611C6.0446 8.72765 6.0446 8.40588 6.24307 8.20742Z"></path>
+
+                    <path d="M3.37296 10.8776C3.57142 10.6791 3.89319 10.6791 4.09165 10.8776L6.01036 12.7963C6.20882 12.9948 6.20882 13.3165 6.01036 13.515C5.8119 13.7134 5.49013 13.7134 5.29167 13.515L3.37296 11.5963C3.1745 11.3978 3.1745 11.076 3.37296 10.8776Z"></path>
+
+                    </svg>
+                Dimensions</button>
+                <div id="d10">
+                    <p>La plaque mesure 18 x 13 cm</p>
+                </div>
+            </div>
+            <div class="divshopdetail">
+                <button id="togg11">
+                    <svg 
+                    class="icon icon-accordion color-foreground-text" 
+                    aria-hidden="true" 
+                    focusable="false" 
+                    role="presentation" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="20" 
+                    height="20" 
+                    viewBox="0 0 20 20"
+                    fill="#ffffff"
+                >
+                    <path d="M1.16154 11.8423L8.09186 18.829C8.28991 19.0287 8.61108 19.0284 8.80882 18.8285L18.839 8.68572C18.9337 8.58998 18.9868 8.46032 18.9868 8.32514V1.53212C18.9868 1.25006 18.76 1.02141 18.4802 1.02141L11.387 1.02147C11.2527 1.02147 11.1238 1.07529 11.0288 1.17108L1.16151 11.1201C0.963704 11.3195 0.963715 11.6428 1.16154 11.8423ZM20 1.53212C20 0.685947 19.3196 -6.58649e-06 18.4802 0L11.387 5.82026e-05C10.9839 6.15389e-05 10.5973 0.161509 10.3123 0.448879L0.445049 10.3979C-0.148378 10.9962 -0.148346 11.9662 0.445123 12.5645L7.37544 19.5513C7.96958 20.1502 8.9331 20.1495 9.52633 19.5496L19.5565 9.40686C19.8405 9.11967 20 8.73068 20 8.32514V1.53212Z" fill-rule="evenodd"></path>
+
+                    <path d="M15.9028 8.22958C14.7801 9.36148 12.9597 9.36148 11.837 8.22958C10.7142 7.09769 10.7142 5.26253 11.837 4.13064C12.9597 2.99875 14.7801 2.99875 15.9028 4.13064C17.0256 5.26253 17.0256 7.09769 15.9028 8.22958ZM12.5534 7.50734C13.2805 8.24034 14.4593 8.24034 15.1864 7.50734C15.9135 6.77433 15.9135 5.58589 15.1864 4.85289C14.4593 4.11988 13.2805 4.11988 12.5534 4.85289C11.8263 5.58589 11.8263 6.77433 12.5534 7.50734Z"></path>
+
+                    </svg>
+                Mise en panier</button>
+                <div id="d11">
+                    <p>Tirage numéroté et limité à 3 000 exemplaires (limité à 1 exemplaire par commande)</p>
+                </div>
+            </div>
+            <div class="divshopdetail">
+                <button id="togg12">
+                    <svg 
+                    class="icon icon-accordion color-foreground-text" 
+                    aria-hidden="true" 
+                    focusable="false" 
+                    role="presentation" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    width="20" 
+                    height="20" 
+                    viewBox="0 0 20 20"
+                    fill="#ffffff"
+                >
+
+                    <path d="M9.91038 18.5904L14.9458 9.80988C17.1744 5.9237 14.4213 1.03316 10.004 1.03316C5.61856 1.03316 2.85676 5.85475 5.01217 9.74644L9.91038 18.5904ZM10.004 0C4.84496 0 1.59264 5.67261 4.13039 10.2547L9.34236 19.6651C9.58751 20.1078 10.2108 20.1126 10.4625 19.6737L15.82 10.3316C18.4445 5.75498 15.2016 0 10.004 0Z" fill-rule="evenodd"></path>
+
+                    <path d="M12.9997 6.79602C12.9997 8.5559 11.6011 9.98256 9.87597 9.98256C8.1508 9.98256 6.75228 8.5559 6.75228 6.79602C6.75228 5.03615 8.1508 3.60949 9.87597 3.60949C11.6011 3.60949 12.9997 5.03615 12.9997 6.79602ZM9.87597 8.9494C11.0418 8.9494 11.9869 7.9853 11.9869 6.79602C11.9869 5.60675 11.0418 4.64265 9.87597 4.64265C8.71015 4.64265 7.76506 5.60675 7.76506 6.79602C7.76506 7.9853 8.71015 8.9494 9.87597 8.9494Z"></path>
+
+                    </svg>
+                Fabrications</button>
+                <div id="d12">
+                    <p>Ce produit est fabriqué sur-mesure en Italie</p>
+                </div>
+            </div>
+            <a href="productsheet.html" class="detail">Afficher les détails
+                <svg class="svgarrow"
+                viewBox="0 0 14 10" 
+                fill="none" 
+                aria-hidden="true" 
+                focusable="false" 
+                role="presentation" 
+                class="icon icon-arrow" 
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="#70D038"></path>
+                </svg>
+            </a>
         </section>
         <section class="associations">
             <div class="seasheperd">
                 <img class="asso" src="./public/images/other img/sea-sheperd-.webp" alt="Logo Sea Sheperd">
-                <strong>Sea Sheperd</strong>
+                <strong class="assostrong">Sea Sheperd</strong>
                 <p>Défend activement l'océan et toutes les formes de vie marine depuis 1977.</p>
-                <a href="En savoir plus" class="learnmore">En savoir plus -></a>
+                <a href="" class="learnmore">En savoir plus
+                    <svg class="svgarrow"
+                    viewBox="0 0 14 10" 
+                    fill="none" 
+                    aria-hidden="true" 
+                    focusable="false" 
+                    role="presentation" 
+                    class="icon icon-arrow" 
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="#70D038"></path>
+                    </svg>
+                </a>
             </div>
             <div class="lpo">
                 <img class="asso" src="./public/images/other img/lpo.webp" alt="Logo LPO">
-                <strong>LPO</strong>
+                <strong class="assostrong">LPO</strong>
                 <p>La LPO oeuvre au quotidien pour la protection des oiseaux et de l'ensemble du vivant.</p>
-                <a href="En savoir plus" class="learnmore">En savoir plus -></a>
+                <a href="./associations.html" class="learnmore">En savoir plus
+                    <svg class="svgarrow"
+                    viewBox="0 0 14 10" 
+                    fill="none" 
+                    aria-hidden="true" 
+                    focusable="false" 
+                    role="presentation" 
+                    class="icon icon-arrow" 
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="#70D038"></path>
+                    </svg>
+                </a>
             </div>
             <div class="wwf">
                 <img class="asso" src="./public/images/other img/wwf-.webp" alt="Logo WWF">
-                <strong>WWF</strong>
+                <strong class="assostrong">WWF</strong>
                 <p>Travaille dans plus de 100 pays, pour protéger la planète, la nature et tous ses êtres vivants</p>
-                <a href="En savoir plus" class="learnmore">En savoir plus -></a>
+                <a href="./associations.html" class="learnmore">En savoir plus
+                    <svg class="svgarrow"
+                    viewBox="0 0 14 10" 
+                    fill="none" 
+                    aria-hidden="true" 
+                    focusable="false" 
+                    role="presentation" 
+                    class="icon icon-arrow" 
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="#70D038"></path>
+                    </svg>
+                </a>
             </div>
             <div class="seacleaners">
                 <img class="asso" src="./public/images/other img/the-seacleaners-.webp" alt="Logo SeaCleaners">
-                <strong>Sea Cleaners</strong>
+                <strong class="assostrong">Sea Cleaners</strong>
                 <p>Lutte contre la pollution plastique des océans grâce à des actions à terre et en mer.</p>
-                <a href="En savoir plus" class="learnmore">En savoir plus -></a>
+                <a href="./associations.html" class="learnmore">En savoir plus
+                    <svg class="svgarrow"
+                    viewBox="0 0 14 10" 
+                    fill="none" 
+                    aria-hidden="true" 
+                    focusable="false" 
+                    role="presentation" 
+                    class="icon icon-arrow" 
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.537.808a.5.5 0 01.817-.162l4 4a.5.5 0 010 .708l-4 4a.5.5 0 11-.708-.708L11.793 5.5H1a.5.5 0 010-1h10.793L8.646 1.354a.5.5 0 01-.109-.546z" fill="#70D038"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="faq">
+                <img class="assohelp" src="./public/images/other img/help.webp" alt="Help Web">
+                <div class="phelp">
+                    <strong class="help">Besoin d'aide ?</strong>
+                    <p>Consultez notre FAQ, la réponse à votre question s'y trouve certainement!</p>
+                    <p>Pour toute autre question, contactez-nous via le chat situé en bas a droite</p>
+                    <a href="./associations.html" class="consultfaq" >Consulter la FAQ</a>
+                </div>
             </div>
         </section>
-        <div class="faq">
-            <strong class="help">Besoin d'aide ?</strong>
-            <img class="asso" src="./public/images/other img/help.webp" alt="Help Web">
-            <strong>Besoin d'aide ?</strong>
-            <p>Consultez notre FAQ, la réponse à votre question s'y trouve certainement!</p>
-            <p>Pour toute autre question, contactez-nous via le chat situé en bas a droite</p>
-            <a href="Consulter la FAQ" class="consultfaq" >Consulter la FAQ</a>
-        </div>
-        <div class="foot">
-            <strong>Shop</strong>
-            <p>Mentions légales conditions générales de vente Politique</p>
-            <p>Conditions générales de vente Politique</p>
-            <p>Politique de confidentialité</p>
-            <p>The seaCleaners-Sea Sheperd-LPO-WWF</p>
-            <p>Votre générosité nous pertmet de soutenir et contribuer aux actions de ces associations ! Merci à vous </p>
-            <img class="logofooter" src="./public/images/other img/zevent-logo.webp" alt="Logo Zevent">
-        </div>
-        <div class="reseau">
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-square-reddit"></i>
-        </div>
+            <div class="bottom">
+                <div class="foot">
+                    <div class="pfootfordesktop">
+                        <div class="pfoot1fordesktop">
+                            <strong class="shopstrong">Shop</strong>
+                            <p>Mentions légales</p>
+                            <p>conditions générales de vente</p>
+                            <p>Politique de confidentialité</p>
+                        </div>
+                        <div class="pfoot2fordesktop">
+                            <p>The seaCleaners-Sea Sheperd-LPO-WWF</p>
+                            <p>Votre générosité nous pertmet de soutenir et contribuer aux actions de ces associations ! Merci à vous</p>
+                            <p class="heart"><i class="fa-solid fa-heart"></i></p>
+                        </div>
+                    </div>
+                    <img class="logofooter" src="./public/images/other img/zevent-logo.webp" alt="Logo Zevent">
+                </div>
+                <div class="reseau">
+                    <i class="fa-brands fa-twitter" id="twitter"></i>
+                    <i class="fa-brands fa-instagram" id="insta"></i>
+                    <i class="fa-brands fa-square-reddit" id="reddit"></i>
+                </div>  
+            </div>
     </main>
     <footer>
-            <p class="endpage">@Zevent</p>
+        <div class="pay">
+            <a href="" class="amex">
+                <svg 
+                class="icon icon--full-color" 
+                xmlns="http://www.w3.org/2000/svg" 
+                role="img" 
+                viewBox="0 0 38 24" 
+                width="38" 
+                height="24" 
+                aria-labelledby=="pi-american_express"
+                >
+                <title id="pi-american_express">American Express</title>
+                <g fill="none">
+                    <path fill="#000" d="M35,0 L3,0 C1.3,0 0,1.3 0,3 L0,21 C0,22.7 1.4,24 3,24 L35,24 C36.7,24 38,22.7 38,21 L38,3 C38,1.3 36.6,0 35,0 Z" opacity=".07"></path>
+
+                    <path fill="#006FCF" d="M35,1 C36.1,1 37,1.9 37,3 L37,21 C37,22.1 36.1,23 35,23 L3,23 C1.9,23 1,22.1 1,21 L1,3 C1,1.9 1.9,1 3,1 L35,1"></path>
+
+                    <path fill="#FFF" d="M8.971,10.268 L9.745,12.144 L8.203,12.144 L8.971,10.268 Z M25.046,10.346 L22.069,10.346 L22.069,11.173 L24.998,11.173 L24.998,12.412 L22.075,12.412 L22.075,13.334 L25.052,13.334 L25.052,14.073 L27.129,11.828 L25.052,9.488 L25.046,10.346 L25.046,10.346 Z M10.983,8.006 L14.978,8.006 L15.865,9.941 L16.687,8 L27.057,8 L28.135,9.19 L29.25,8 L34.013,8 L30.494,11.852 L33.977,15.68 L29.143,15.68 L28.065,14.49 L26.94,15.68 L10.03,15.68 L9.536,14.49 L8.406,14.49 L7.911,15.68 L4,15.68 L7.286,8 L10.716,8 L10.983,8.006 Z M19.646,9.084 L17.407,9.084 L15.907,12.62 L14.282,9.084 L12.06,9.084 L12.06,13.894 L10,9.084 L8.007,9.084 L5.625,14.596 L7.18,14.596 L7.674,13.406 L10.27,13.406 L10.764,14.596 L13.484,14.596 L13.484,10.661 L15.235,14.602 L16.425,14.602 L18.165,10.673 L18.165,14.603 L19.623,14.603 L19.647,9.083 L19.646,9.084 Z M28.986,11.852 L31.517,9.084 L29.695,9.084 L28.094,10.81 L26.546,9.084 L20.652,9.084 L20.652,14.602 L26.462,14.602 L28.076,12.864 L29.624,14.602 L31.499,14.602 L28.987,11.852 L28.986,11.852 Z"></path>
+                </g>
+                </svg>
+            </a>
+            <a href="" class="applepay">
+                <svg 
+                class="icon icon--full-color" 
+                version="1.1" 
+                xmlns="http://www.w3.org/2000/svg" 
+                role="img" 
+                x="0" 
+                y="0" 
+                width="38" 
+                height="24" 
+                viewBox="0 0 165.521 105.965" 
+                xml:space="preserve" 
+                aria-labelledby=="pi-apple_pay"
+            >
+                <title id="pi-apple_pay">Apple Pay</title>
+
+                <path fill="#000" d="M150.698 0H14.823c-.566 0-1.133 0-1.698.003-.477.004-.953.009-1.43.022-1.039.028-2.087.09-3.113.274a10.51 10.51 0 0 0-2.958.975 9.932 9.932 0 0 0-4.35 4.35 10.463 10.463 0 0 0-.975 2.96C.113 9.611.052 10.658.024 11.696a70.22 70.22 0 0 0-.022 1.43C0 13.69 0 14.256 0 14.823v76.318c0 .567 0 1.132.002 1.699.003.476.009.953.022 1.43.028 1.036.09 2.084.275 3.11a10.46 10.46 0 0 0 .974 2.96 9.897 9.897 0 0 0 1.83 2.52 9.874 9.874 0 0 0 2.52 1.83c.947.483 1.917.79 2.96.977 1.025.183 2.073.245 3.112.273.477.011.953.017 1.43.02.565.004 1.132.004 1.698.004h135.875c.565 0 1.132 0 1.697-.004.476-.002.952-.009 1.431-.02 1.037-.028 2.085-.09 3.113-.273a10.478 10.478 0 0 0 2.958-.977 9.955 9.955 0 0 0 4.35-4.35c.483-.947.789-1.917.974-2.96.186-1.026.246-2.074.274-3.11.013-.477.02-.954.022-1.43.004-.567.004-1.132.004-1.699V14.824c0-.567 0-1.133-.004-1.699a63.067 63.067 0 0 0-.022-1.429c-.028-1.038-.088-2.085-.274-3.112a10.4 10.4 0 0 0-.974-2.96 9.94 9.94 0 0 0-4.35-4.35A10.52 10.52 0 0 0 156.939.3c-1.028-.185-2.076-.246-3.113-.274a71.417 71.417 0 0 0-1.431-.022C151.83 0 151.263 0 150.698 0z"></path>
+
+                <path fill="#FFF" d="M150.698 3.532l1.672.003c.452.003.905.008 1.36.02.793.022 1.719.065 2.583.22.75.135 1.38.34 1.984.648a6.392 6.392 0 0 1 2.804 2.807c.306.6.51 1.226.645 1.983.154.854.197 1.783.218 2.58.013.45.019.9.02 1.36.005.557.005 1.113.005 1.671v76.318c0 .558 0 1.114-.004 1.682-.002.45-.008.9-.02 1.35-.022.796-.065 1.725-.221 2.589a6.855 6.855 0 0 1-.645 1.975 6.397 6.397 0 0 1-2.808 2.807c-.6.306-1.228.511-1.971.645-.881.157-1.847.2-2.574.22-.457.01-.912.017-1.379.019-.555.004-1.113.004-1.669.004H14.801c-.55 0-1.1 0-1.66-.004a74.993 74.993 0 0 1-1.35-.018c-.744-.02-1.71-.064-2.584-.22a6.938 6.938 0 0 1-1.986-.65 6.337 6.337 0 0 1-1.622-1.18 6.355 6.355 0 0 1-1.178-1.623 6.935 6.935 0 0 1-.646-1.985c-.156-.863-.2-1.788-.22-2.578a66.088 66.088 0 0 1-.02-1.355l-.003-1.327V14.474l.002-1.325a66.7 66.7 0 0 1 .02-1.357c.022-.792.065-1.717.222-2.587a6.924 6.924 0 0 1 .646-1.981c.304-.598.7-1.144 1.18-1.623a6.386 6.386 0 0 1 1.624-1.18 6.96 6.96 0 0 1 1.98-.646c.865-.155 1.792-.198 2.586-.22.452-.012.905-.017 1.354-.02l1.677-.003h135.875"></path>
+
+                <g><g>
+
+                <path fill="#000" d="M43.508 35.77c1.404-1.755 2.356-4.112 2.105-6.52-2.054.102-4.56 1.355-6.012 3.112-1.303 1.504-2.456 3.959-2.156 6.266 2.306.2 4.61-1.152 6.063-2.858"></path>
+
+                <path fill="#000" d="M45.587 39.079c-3.35-.2-6.196 1.9-7.795 1.9-1.6 0-4.049-1.8-6.698-1.751-3.447.05-6.645 2-8.395 5.1-3.598 6.2-.95 15.4 2.55 20.45 1.699 2.5 3.747 5.25 6.445 5.151 2.55-.1 3.549-1.65 6.647-1.65 3.097 0 3.997 1.65 6.696 1.6 2.798-.05 4.548-2.5 6.247-5 1.95-2.85 2.747-5.6 2.797-5.75-.05-.05-5.396-2.101-5.446-8.251-.05-5.15 4.198-7.6 4.398-7.751-2.399-3.548-6.147-3.948-7.447-4.048"></path>
+
+                </g><g>
+
+                <path fill="#000" d="M78.973 32.11c7.278 0 12.347 5.017 12.347 12.321 0 7.33-5.173 12.373-12.529 12.373h-8.058V69.62h-5.822V32.11h14.062zm-8.24 19.807h6.68c5.07 0 7.954-2.729 7.954-7.46 0-4.73-2.885-7.434-7.928-7.434h-6.706v14.894z"></path>
+
+                <path fill="#000" d="M92.764 61.847c0-4.809 3.665-7.564 10.423-7.98l7.252-.442v-2.08c0-3.04-2.001-4.704-5.562-4.704-2.938 0-5.07 1.507-5.51 3.82h-5.252c.157-4.86 4.731-8.395 10.918-8.395 6.654 0 10.995 3.483 10.995 8.89v18.663h-5.38v-4.497h-.13c-1.534 2.937-4.914 4.782-8.579 4.782-5.406 0-9.175-3.222-9.175-8.057zm17.675-2.417v-2.106l-6.472.416c-3.64.234-5.536 1.585-5.536 3.95 0 2.288 1.975 3.77 5.068 3.77 3.95 0 6.94-2.522 6.94-6.03z"></path>
+
+                <path fill="#000" d="M120.975 79.652v-4.496c.364.051 1.247.103 1.715.103 2.573 0 4.029-1.09 4.913-3.899l.52-1.663-9.852-27.293h6.082l6.863 22.146h.13l6.862-22.146h5.927l-10.216 28.67c-2.34 6.577-5.017 8.735-10.683 8.735-.442 0-1.872-.052-2.261-.157z"></path>
+
+                </g></g>
+
+                </svg>
+            </a>
+            <a href="" class="mastercard">
+                <svg 
+                class="icon icon--full-color" 
+                viewBox="0 0 38 24" 
+                xmlns="http://www.w3.org/2000/svg" 
+                role="img" 
+                width="38" 
+                height="24" 
+                aria-labelledby=="pi-master"
+            >
+
+                <title id="pi-master">Mastercard</title>
+
+                <path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
+
+                <path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path>
+
+                <circle fill="#EB001B" cx="15" cy="12" r="7"></circle>
+
+                <circle fill="#F79E1B" cx="23" cy="12" r="7"></circle>
+
+                <path fill="#FF5F00" d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"></path>
+
+                </svg>
+            </a>
+            <a href="" class="visa">
+                <svg 
+                class="icon icon--full-color" 
+                viewBox="0 0 38 24" 
+                xmlns="http://www.w3.org/2000/svg" 
+                role="img" 
+                width="38" 
+                height="24" 
+                aria-labelledby=="pi-visa"
+            >
+
+                <title id="pi-visa">Visa</title>
+
+                <path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path>
+
+                <path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path>
+
+                <path d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z" fill="#142688"></path>
+
+                </svg>
+            </a>
+        </div>
+        <p class="arobase">@Zevent</p>
     </footer>
     <script src="https://kit.fontawesome.com/5aba8f7921.js" crossorigin="anonymous"></script>
+    <script src="./public/script/shop.js"></script>
 </body>
 </html>
